@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sga
+{
+    public partial class Menu_Profesor : Form
+    {
+        public Menu_Profesor()
+        {
+            InitializeComponent();
+        }
+
+        private void bt_agregarEstudiante_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new Registro());
+
+        }
+        private void AbrirEnPanelCliente(Form formClientes)
+        {
+            if (this.panel_menuProfesor.Controls.Count > 0)
+            {
+                this.panel_menuProfesor.Controls.RemoveAt(0);
+            }
+
+            Form fn = formClientes as Form;
+            if (fn != null)
+            {
+                fn.TopLevel = false;
+                fn.FormBorderStyle = FormBorderStyle.None;
+                fn.Dock = DockStyle.Fill;
+                this.panel_menuProfesor.Controls.Add(fn);
+                this.panel_menuProfesor.Tag = fn;
+                fn.Show();
+            }
+        }
+    }
+}
