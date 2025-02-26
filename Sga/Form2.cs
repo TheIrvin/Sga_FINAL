@@ -52,16 +52,6 @@ namespace Sga
             lbnConfirmar.Size = new Size(103, 34);
         }
 
-        private void lbnAtras_MouseEnter(object sender, EventArgs e)
-        {
-            lbnAtras.Size = new Size(103, 34);
-        }
-
-        private void lbnAtras_MouseLeave(object sender, EventArgs e)
-        {
-            lbnAtras.Size = new Size(102, 33);
-        }
-
         private void lbnEliminar_MouseEnter(object sender, EventArgs e)
         {
             lbnEliminar.Size = new Size(103, 34);
@@ -88,32 +78,48 @@ namespace Sga
             {
                 if (alumnoID == null) // Si no hay ID, insertar nuevo alumno
                 {
-                    string query = "INSERT INTO Alumnos (NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
-                                   "VALUES (@NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Alumno')";
+                    using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
-                        cmd.Parameters.AddWithValue("@NombreCompleto", txtBox_G_nombresAlumno.Text);
-                        cmd.Parameters.AddWithValue("@Cedula", txtBox_G_cédulaAlumno.Text);
-                        cmd.Parameters.AddWithValue("@NombrePadre", txtBox_G_nombresPadre.Text);
-                        cmd.Parameters.AddWithValue("@NombreMadre", txtBox_G_nombres_madre.Text);
-                        cmd.Parameters.AddWithValue("@Telefono", txtBox_G_telefono.Text);
-                        cmd.Parameters.AddWithValue("@Gmail", txtBox_G_Gmail.Text);
-                        cmd.ExecuteNonQuery();
+                        cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
+                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = txtContraseñaEstudiante.Text;
+                        int usuarioID = (int)cmdUsuarios.ExecuteScalar();
+
+                        string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
+                                              "VALUES (@UsuarioID, @NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
+                        using (SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con))
+                        {
+                            cmdAlumnos.Parameters.Add("@UsuarioID", SqlDbType.Int).Value = usuarioID;
+                            cmdAlumnos.Parameters.Add("@NombreCompleto", SqlDbType.VarChar).Value = txtBox_G_nombresAlumno.Text;
+                            cmdAlumnos.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = txtBox_G_cédulaAlumno.Text;
+                            cmdAlumnos.Parameters.Add("@NombrePadre", SqlDbType.VarChar).Value = txtBox_G_nombresPadre.Text;
+                            cmdAlumnos.Parameters.Add("@NombreMadre", SqlDbType.VarChar).Value = txtBox_G_nombres_madre.Text;
+                            cmdAlumnos.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = txtBox_G_telefono.Text;
+                            cmdAlumnos.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
+                            cmdAlumnos.ExecuteNonQuery();
+                        }
                     }
                 }
-                else // Si hay un ID, actualizar el alumno existente
+                else // Si hay un ID, actualizar el alumno y la contraseña en Usuarios
                 {
-                    string query = "UPDATE Alumnos SET NombreCompleto=@NombreCompleto, Cedula=@Cedula, NombrePadre=@NombrePadre, NombreMadre=@NombreMadre, Telefono=@Telefono, Gmail=@Gmail WHERE ID=@ID";
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    string queryAlumnos = "UPDATE Alumnos SET NombreCompleto=@NombreCompleto, Cedula=@Cedula, NombrePadre=@NombrePadre, NombreMadre=@NombreMadre, Telefono=@Telefono, Gmail=@Gmail WHERE ID=@ID";
+                    using (SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con))
                     {
-                        cmd.Parameters.AddWithValue("@ID", alumnoID);
-                        cmd.Parameters.AddWithValue("@NombreCompleto", txtBox_G_nombresAlumno.Text);
-                        cmd.Parameters.AddWithValue("@Cedula", txtBox_G_cédulaAlumno.Text);
-                        cmd.Parameters.AddWithValue("@NombrePadre", txtBox_G_nombresPadre.Text);
-                        cmd.Parameters.AddWithValue("@NombreMadre", txtBox_G_nombres_madre.Text);
-                        cmd.Parameters.AddWithValue("@Telefono", txtBox_G_telefono.Text);
-                        cmd.Parameters.AddWithValue("@Gmail", txtBox_G_Gmail.Text);
-                        cmd.ExecuteNonQuery();
+                        cmdAlumnos.Parameters.Add("@ID", SqlDbType.Int).Value = alumnoID;
+                        cmdAlumnos.Parameters.Add("@NombreCompleto", SqlDbType.VarChar).Value = txtBox_G_nombresAlumno.Text;
+                        cmdAlumnos.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = txtBox_G_cédulaAlumno.Text;
+                        cmdAlumnos.Parameters.Add("@NombrePadre", SqlDbType.VarChar).Value = txtBox_G_nombresPadre.Text;
+                        cmdAlumnos.Parameters.Add("@NombreMadre", SqlDbType.VarChar).Value = txtBox_G_nombres_madre.Text;
+                        cmdAlumnos.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = txtBox_G_telefono.Text;
+                        cmdAlumnos.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
+                        cmdAlumnos.ExecuteNonQuery();
+                    }
+                    string queryUsuarios = "UPDATE Usuarios SET Contraseña=@Contraseña WHERE Gmail=@Gmail";
+                    using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
+                    {
+                        cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
+                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = txtContraseñaEstudiante.Text;
+                        cmdUsuarios.ExecuteNonQuery();
                     }
                     alumnoID = null; // Resetear ID después de actualizar
                 }
@@ -126,7 +132,7 @@ namespace Sga
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dvg_Gestion_estudiante.Rows[e.RowIndex];
-                alumnoID = Convert.ToInt32(row.Cells["ID"].Value); // Guardar ID seleccionado
+                alumnoID = Convert.ToInt32(row.Cells["ID"].Value);
                 txtBox_G_nombresAlumno.Text = row.Cells["NombreCompleto"].Value.ToString();
                 txtBox_G_cédulaAlumno.Text = row.Cells["Cedula"].Value.ToString();
                 txtBox_G_nombresPadre.Text = row.Cells["NombrePadre"].Value.ToString();

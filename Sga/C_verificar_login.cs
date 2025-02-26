@@ -11,6 +11,7 @@ namespace Sga
     internal class C_verificar_login
     {
         private string cadenaConexion = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=SGA_bdd;User Id=AccesoChari;Password=accesochari;";
+
         public bool VerificarLogin(string gmail, string contraseña)
         {
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
@@ -26,14 +27,7 @@ namespace Sga
 
                     int cuentaUsuarios = (int)cmd.ExecuteScalar();
 
-                    if (cuentaUsuarios > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return cuentaUsuarios > 0;
                 }
                 catch (Exception ex)
                 {
@@ -55,8 +49,7 @@ namespace Sga
                     SqlCommand cmd = new SqlCommand(query, conexion);
                     cmd.Parameters.AddWithValue("@Gmail", gmail);
 
-                    string tipoUsuario = (string)cmd.ExecuteScalar();
-                    return tipoUsuario;
+                    return cmd.ExecuteScalar()?.ToString();
                 }
                 catch (Exception ex)
                 {
