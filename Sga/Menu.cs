@@ -37,11 +37,6 @@ namespace Sga
 
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
             
@@ -52,35 +47,34 @@ namespace Sga
 
         }
 
-        private void btnMaximizarmenu_Click(object sender, EventArgs e)
+        private void btnTareasME_Click(object sender, EventArgs e)
         {
-            btnMaximizarmenu.Visible = false;
-            btnRestaurarM.Visible = true;
-            this.WindowState = FormWindowState.Maximized;
+
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnRestaurarM_Click(object sender, EventArgs e)
-        {
-            btnRestaurarM.Visible = false;
-            btnMaximizarmenu.Visible = true;
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void panelMenu_MouseMove(object sender, MouseEventArgs e)
+        private void panelCabeceraMC_MouseLeave(object sender, EventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnAsistencias_Click(object sender, EventArgs e)
+        private void AbrirEnPanelCliente(Form formClientes)
         {
-            Asistencia frmAsis = new Asistencia();
-            frmAsis.Show();
+            if (this.panelContenedorME.Controls.Count > 0)
+            {
+                this.Controls.RemoveAt(0);
+            }
+
+            Form fn = formClientes as Form;
+            if (fn != null)
+            {
+                fn.TopLevel = false;
+                fn.FormBorderStyle = FormBorderStyle.None;
+                fn.Dock = DockStyle.Fill;
+                this.panelContenedorME.Controls.Add(fn);
+                this.panelContenedorME.Tag = fn;
+                fn.Show();
+            }
         }
     }
 }

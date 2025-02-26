@@ -67,6 +67,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -196,6 +205,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Imagen_menú_profesor.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-02-25 at 9.40.59 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-02-25 at 8.50.58 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelOpciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seguidores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir-amigo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloc-de-dibujo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comunicarse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabecera niños.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panelOpcionesME.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panellll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinosaurio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muneca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda-con-las-tareas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recreo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mensaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo formularios.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
