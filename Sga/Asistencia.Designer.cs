@@ -34,9 +34,10 @@
             // 
             // lbnRegistro
             // 
-            this.lbnRegistro.Location = new System.Drawing.Point(161, 180);
+            this.lbnRegistro.Location = new System.Drawing.Point(121, 146);
+            this.lbnRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbnRegistro.Name = "lbnRegistro";
-            this.lbnRegistro.Size = new System.Drawing.Size(170, 112);
+            this.lbnRegistro.Size = new System.Drawing.Size(128, 91);
             this.lbnRegistro.TabIndex = 0;
             this.lbnRegistro.Text = "Registro de estudiantes";
             this.lbnRegistro.UseVisualStyleBackColor = true;
@@ -44,20 +45,22 @@
             // 
             // btnLista
             // 
-            this.btnLista.Location = new System.Drawing.Point(460, 180);
+            this.btnLista.Location = new System.Drawing.Point(345, 146);
+            this.btnLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLista.Name = "btnLista";
-            this.btnLista.Size = new System.Drawing.Size(170, 112);
+            this.btnLista.Size = new System.Drawing.Size(128, 91);
             this.btnLista.TabIndex = 1;
             this.btnLista.Text = "Lista";
             this.btnLista.UseVisualStyleBackColor = true;
             // 
             // Asistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(718, 516);
             this.Controls.Add(this.btnLista);
             this.Controls.Add(this.lbnRegistro);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Asistencia";
             this.Text = "Asistencia";
             this.ResumeLayout(false);

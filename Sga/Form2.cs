@@ -12,9 +12,17 @@ namespace Sga
 {
     public partial class GestionEstudiantes : Form
     {
+        Conexión_BDD conSQL = new Conexión_BDD();
+        
         public GestionEstudiantes()
         {
             InitializeComponent();
+        }
+
+
+        private void GestionEstudiantes_Load(object sender, EventArgs e)
+        {
+            dvg_Gestion_estudiante.DataSource = conSQL.retornaRegistros("Select * from Alumnos");
         }
     }
 }

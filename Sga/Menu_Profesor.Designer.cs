@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelContenedorMP = new System.Windows.Forms.Panel();
+            this.panel_menuProfesor = new System.Windows.Forms.Panel();
             this.panelOpciones = new System.Windows.Forms.Panel();
             this.btnHorariosMP = new System.Windows.Forms.Button();
             this.btnEnviarSMSMP = new System.Windows.Forms.Button();
@@ -44,13 +44,13 @@
             this.panelCabeceraProfe.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelContenedorMP
+            // panel_menuProfesor
             // 
-            this.panelContenedorMP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorMP.Location = new System.Drawing.Point(198, 47);
-            this.panelContenedorMP.Name = "panelContenedorMP";
-            this.panelContenedorMP.Size = new System.Drawing.Size(734, 555);
-            this.panelContenedorMP.TabIndex = 2;
+            this.panel_menuProfesor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_menuProfesor.Location = new System.Drawing.Point(198, 47);
+            this.panel_menuProfesor.Name = "panel_menuProfesor";
+            this.panel_menuProfesor.Size = new System.Drawing.Size(734, 555);
+            this.panel_menuProfesor.TabIndex = 2;
             // 
             // panelOpciones
             // 
@@ -160,6 +160,7 @@
             this.btnAggAlumnos.Text = "Gestión de Alumnos";
             this.btnAggAlumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAggAlumnos.UseVisualStyleBackColor = false;
+            this.btnAggAlumnos.Click += new System.EventHandler(this.btnAggAlumnos_Click);
             // 
             // panelCabeceraProfe
             // 
@@ -253,7 +254,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 602);
-            this.Controls.Add(this.panelContenedorMP);
+            this.Controls.Add(this.panel_menuProfesor);
             this.Controls.Add(this.panelOpciones);
             this.Controls.Add(this.panelCabeceraProfe);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -279,7 +280,7 @@
         private System.Windows.Forms.Button btnTareasMP;
         private System.Windows.Forms.Button btnRegistrarAsisMP;
         private System.Windows.Forms.Button btnEnviarSMSMP;
-        private System.Windows.Forms.Panel panelContenedorMP;
+        private System.Windows.Forms.Panel panel_menuProfesor;
         private System.Windows.Forms.Button btnHorariosMP;
     }
 }

@@ -20,7 +20,7 @@ namespace Sga
        
         private void AbrirEnPanelCliente(Form formClientes)
         {
-            if (this.panelContenedorMP.Controls.Count > 0)
+            if (this.panel_menuProfesor.Controls.Count > 0)
             {
                 this.Controls.RemoveAt(0);
             }
@@ -31,8 +31,8 @@ namespace Sga
                 fn.TopLevel = false;
                 fn.FormBorderStyle = FormBorderStyle.None;
                 fn.Dock = DockStyle.Fill;
-                this.panelContenedorMP.Controls.Add(fn);
-                this.panelContenedorMP.Tag = fn;
+                this.panel_menuProfesor.Controls.Add(fn);
+                this.panel_menuProfesor.Tag = fn;
                 fn.Show();
             }
         }
@@ -40,6 +40,11 @@ namespace Sga
         private void Menu_Profesor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAggAlumnos_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new GestionEstudiantes());
         }
     }
 }

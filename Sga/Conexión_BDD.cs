@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,10 @@ namespace Sga
     {
         private SqlConnection bdd_Con;
         private string cadenaConexion;
+        public DataTable oDT;
+        public SqlCommand oCom;
+        public SqlDataReader oDR;
+        public SqlDataAdapter oDA;
 
         public Conexión_BDD()
         {
@@ -33,6 +39,19 @@ namespace Sga
         {
             if (bdd_Con.State == System.Data.ConnectionState.Open)
                 bdd_Con.Close();
+        }
+        public DataTable retornaRegistros(string Sentencia)
+        {
+            if (Sentencia.Length > 0)
+            {
+                AbrirConexion();
+                oCom = new SqlCommand(Sentencia, bdd_Con);
+                oDA = new SqlDataAdapter(oCom);
+                oDT = new DataTable();
+                oDA.Fill(oDT);
+                CerrarConexion();
+            }
+            return oDT;
         }
     }
 }

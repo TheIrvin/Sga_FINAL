@@ -48,9 +48,9 @@
             this.lblRegistroEstudiante.Location = new System.Drawing.Point(208, 74);
             this.lblRegistroEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistroEstudiante.Name = "lblRegistroEstudiante";
-            this.lblRegistroEstudiante.Size = new System.Drawing.Size(191, 25);
+            this.lblRegistroEstudiante.Size = new System.Drawing.Size(214, 25);
             this.lblRegistroEstudiante.TabIndex = 0;
-            this.lblRegistroEstudiante.Text = "Buscar Estudiantes";
+            this.lblRegistroEstudiante.Text = "Gestionar Estudiantes";
             // 
             // label1
             // 
@@ -88,7 +88,7 @@
             // lbnAtras
             // 
             this.lbnAtras.Location = new System.Drawing.Point(70, 271);
-            this.lbnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.lbnAtras.Name = "lbnAtras";
             this.lbnAtras.Size = new System.Drawing.Size(91, 67);
             this.lbnAtras.TabIndex = 4;
@@ -98,7 +98,7 @@
             // lbnEliminar
             // 
             this.lbnEliminar.Location = new System.Drawing.Point(192, 271);
-            this.lbnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnEliminar.Name = "lbnEliminar";
             this.lbnEliminar.Size = new System.Drawing.Size(91, 67);
             this.lbnEliminar.TabIndex = 5;
@@ -108,7 +108,7 @@
             // lbnConfirmar
             // 
             this.lbnConfirmar.Location = new System.Drawing.Point(439, 271);
-            this.lbnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnConfirmar.Name = "lbnConfirmar";
             this.lbnConfirmar.Size = new System.Drawing.Size(91, 67);
             this.lbnConfirmar.TabIndex = 6;
@@ -119,7 +119,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(237, 134);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 20);
             this.textBox1.TabIndex = 7;
@@ -127,7 +127,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(237, 164);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(187, 20);
             this.textBox2.TabIndex = 8;
@@ -135,7 +135,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(237, 196);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(187, 20);
             this.textBox3.TabIndex = 9;
@@ -143,7 +143,7 @@
             // lbnEditar
             // 
             this.lbnEditar.Location = new System.Drawing.Point(315, 271);
-            this.lbnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnEditar.Name = "lbnEditar";
             this.lbnEditar.Size = new System.Drawing.Size(91, 67);
             this.lbnEditar.TabIndex = 10;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(718, 516);
             this.Controls.Add(this.lbnEditar);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -166,9 +166,9 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRegistroEstudiante);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegistroEstudiantes";
-            this.Text = "RegistroEstudiantes";
+            this.Text = "GestionarEstudiantes";
             this.ResumeLayout(false);
             this.PerformLayout();
 
