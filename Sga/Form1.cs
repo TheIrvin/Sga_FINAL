@@ -91,11 +91,11 @@ namespace Sga
 
         private void txtContra_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBox_Contraseña_login.Text))  // Si está vacío
+            if (string.IsNullOrEmpty(txtBox_Contraseña_login.Text))  
             {
-                txtBox_Contraseña_login.Text = "CONTRASEÑA";  // Coloca el placeholder
-                txtBox_Contraseña_login.ForeColor = Color.Gray;  // Cambia el color a gris (como placeholder)
-                txtBox_Contraseña_login.PasswordChar = '\0';  // No ocultar los caracteres (para que no haya puntos)
+                txtBox_Contraseña_login.Text = "CONTRASEÑA";  
+                txtBox_Contraseña_login.ForeColor = Color.Gray;  
+                txtBox_Contraseña_login.PasswordChar = '\0';  
             }
         }
 
@@ -124,14 +124,14 @@ namespace Sga
 
             if (showcontra)
             {
-                txtBox_Contraseña_login.PasswordChar = '\0';  // No ocultar los caracteres
-                pbVerContraseña.Image = Sga.Properties.Resources.ojo__1_;  // Imagen de "ojo abierto"
+                txtBox_Contraseña_login.PasswordChar = '\0';  
+                pbVerContraseña.Image = Sga.Properties.Resources.ojo__1_;  
             }
             else
             {
                 // Ocultar la contraseña (con puntos)
                 txtBox_Contraseña_login.PasswordChar = '●';  // Usar puntos
-                pbVerContraseña.Image = Sga.Properties.Resources.ojo1;  // Imagen de "ojo cerrado"
+                pbVerContraseña.Image = Sga.Properties.Resources.ojo1;  
             }
         }
     }

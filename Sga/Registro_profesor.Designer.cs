@@ -81,7 +81,7 @@
             this.txtbox_profesor_nombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_profesor_nombres.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_profesor_nombres.ForeColor = System.Drawing.Color.Black;
-            this.txtbox_profesor_nombres.Location = new System.Drawing.Point(377, 177);
+            this.txtbox_profesor_nombres.Location = new System.Drawing.Point(376, 177);
             this.txtbox_profesor_nombres.Margin = new System.Windows.Forms.Padding(4);
             this.txtbox_profesor_nombres.Name = "txtbox_profesor_nombres";
             this.txtbox_profesor_nombres.Size = new System.Drawing.Size(204, 14);

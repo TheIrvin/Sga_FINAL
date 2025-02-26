@@ -45,8 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtContraseñaEstudiante = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_Gestion_estudiante)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +85,7 @@
             this.txtBox_G_nombresAlumno.Name = "txtBox_G_nombresAlumno";
             this.txtBox_G_nombresAlumno.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_nombresAlumno.TabIndex = 18;
+            this.txtBox_G_nombresAlumno.TextChanged += new System.EventHandler(this.txtBox_G_nombresAlumno_TextChanged);
             // 
             // lbnConfirmar
             // 
@@ -266,29 +265,6 @@
             this.label6.TabIndex = 119;
             this.label6.Text = "Correo electrónico:";
             // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.lblContraseña.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(21, 292);
-            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(118, 24);
-            this.lblContraseña.TabIndex = 121;
-            this.lblContraseña.Text = "Contraseña:";
-            // 
-            // txtContraseñaEstudiante
-            // 
-            this.txtContraseñaEstudiante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtContraseñaEstudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
-            this.txtContraseñaEstudiante.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseñaEstudiante.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaEstudiante.Location = new System.Drawing.Point(333, 292);
-            this.txtContraseñaEstudiante.Name = "txtContraseñaEstudiante";
-            this.txtContraseñaEstudiante.Size = new System.Drawing.Size(187, 22);
-            this.txtContraseñaEstudiante.TabIndex = 24;
-            // 
             // GestionEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,8 +272,6 @@
             this.BackgroundImage = global::Sga.Properties.Resources.fondo_formularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(718, 516);
-            this.Controls.Add(this.txtContraseñaEstudiante);
-            this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
@@ -343,7 +317,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtContraseñaEstudiante;
     }
 }

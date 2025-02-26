@@ -17,10 +17,29 @@ namespace Sga
             InitializeComponent();
         }
 
-        private void lbnRegistro_Click(object sender, EventArgs e)
+       
+
+        private void btnLista_Click(object sender, EventArgs e)
         {
-            Confirmacion Conf = new Confirmacion();
-            Conf.Show();
+            
+           
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu formAnterior = new Menu();
+            formAnterior.Show();
+        }
+
+        private void pcCerrarAsistencia_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pcMinimizarAsistencia_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

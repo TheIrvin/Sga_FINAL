@@ -81,9 +81,10 @@
             this.btnHorariosMP.Name = "btnHorariosMP";
             this.btnHorariosMP.Size = new System.Drawing.Size(170, 73);
             this.btnHorariosMP.TabIndex = 4;
-            this.btnHorariosMP.Text = "Horario de clases";
+            this.btnHorariosMP.Text = "Agregar Estudiante";
             this.btnHorariosMP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHorariosMP.UseVisualStyleBackColor = false;
+            this.btnHorariosMP.Click += new System.EventHandler(this.btnHorariosMP_Click);
             // 
             // btnEnviarSMSMP
             // 
@@ -122,6 +123,7 @@
             this.btnRegistrarAsisMP.Text = "Registrar Asistencia";
             this.btnRegistrarAsisMP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrarAsisMP.UseVisualStyleBackColor = false;
+            this.btnRegistrarAsisMP.Click += new System.EventHandler(this.btnRegistrarAsisMP_Click);
             // 
             // btnTareasMP
             // 

@@ -65,13 +65,15 @@ namespace Sga
         {
             using (SqlConnection con = conSQL.AbrirConexion())
             {
-                if (alumnoID == null) // Si no hay ID, insertar nuevo alumno
+                
+
+
+                if (alumnoID == null) 
                 {
                     string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Alumno')";
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
-                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = txtContraseñaEstudiante.Text;
                         int usuarioID = (int)cmdUsuarios.ExecuteScalar();
 
                         string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
@@ -89,7 +91,7 @@ namespace Sga
                         }
                     }
                 }
-                else // Si hay un ID, actualizar el alumno y la contraseña en Usuarios
+                else 
                 {
                     string queryAlumnos = "UPDATE Alumnos SET NombreCompleto=@NombreCompleto, Cedula=@Cedula, NombrePadre=@NombrePadre, NombreMadre=@NombreMadre, Telefono=@Telefono, Gmail=@Gmail WHERE ID=@ID";
                     using (SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con))
@@ -107,10 +109,9 @@ namespace Sga
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
-                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = txtContraseñaEstudiante.Text;
                         cmdUsuarios.ExecuteNonQuery();
                     }
-                    alumnoID = null; // Resetear ID después de actualizar
+                    alumnoID = null; 
                 }
             }
             LimpiarCampos();
@@ -119,14 +120,12 @@ namespace Sga
 
         private void LimpiarCampos()
         {
-            // Limpiar todos los TextBox
             txtBox_G_nombresAlumno.Clear();
             txtBox_G_cédulaAlumno.Clear();
             txtBox_G_nombresPadre.Clear();
             txtBox_G_nombres_madre.Clear();
             txtBox_G_telefono.Clear();
             txtBox_G_Gmail.Clear();
-            txtContraseñaEstudiante.Clear();
         }
 
         private void dvg_Gestion_estudiante_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -176,6 +175,11 @@ namespace Sga
         private void lbnActualizar_Click(object sender, EventArgs e)
         {
             CargarDatos();
+        }
+
+        private void txtBox_G_nombresAlumno_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

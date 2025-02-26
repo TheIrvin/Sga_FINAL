@@ -51,5 +51,15 @@ namespace Sga
         {
             Application.Exit();
         }
+
+        private void btnRegistrarAsisMP_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new Asistencia());
+        }
+
+        private void btnHorariosMP_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new Registro());
+        }
     }
 }
