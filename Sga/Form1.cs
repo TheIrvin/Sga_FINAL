@@ -12,6 +12,7 @@ namespace Sga
 {
     public partial class Form1 : Form
     {
+        private bool showcontra = false;
         public Form1()
         {
             InitializeComponent();
@@ -80,21 +81,21 @@ namespace Sga
 
         private void txtContra_Enter(object sender, EventArgs e)
         {
-            if (txtBox_Contraseña_login.Text == "CONTRASEÑA")
+            if (txtBox_Contraseña_login.Text == "CONTRASEÑA") 
             {
-                txtBox_Contraseña_login.Text = "";
+                txtBox_Contraseña_login.Text = ""; 
                 txtBox_Contraseña_login.ForeColor = Color.Blue;
-                txtBox_Contraseña_login.UseSystemPasswordChar = true;
+                txtBox_Contraseña_login.PasswordChar = '●'; 
             }
         }
 
         private void txtContra_Leave(object sender, EventArgs e)
         {
-            if (txtBox_Contraseña_login.Text == "")
+            if (string.IsNullOrEmpty(txtBox_Contraseña_login.Text))  // Si está vacío
             {
-                txtBox_Contraseña_login.Text = "CONTRASEÑA";
-                txtBox_Contraseña_login.ForeColor = Color.DarkBlue;
-                txtBox_Contraseña_login.UseSystemPasswordChar = false;
+                txtBox_Contraseña_login.Text = "CONTRASEÑA";  // Coloca el placeholder
+                txtBox_Contraseña_login.ForeColor = Color.Gray;  // Cambia el color a gris (como placeholder)
+                txtBox_Contraseña_login.PasswordChar = '\0';  // No ocultar los caracteres (para que no haya puntos)
             }
         }
 
@@ -117,5 +118,21 @@ namespace Sga
             lbl_Registrarse.Cursor = Cursors.Default;
         }
 
+        private void pbVerContraseña_Click(object sender, EventArgs e)
+        {
+            showcontra = !showcontra;
+
+            if (showcontra)
+            {
+                txtBox_Contraseña_login.PasswordChar = '\0';  // No ocultar los caracteres
+                pbVerContraseña.Image = Sga.Properties.Resources.ojo__1_;  // Imagen de "ojo abierto"
+            }
+            else
+            {
+                // Ocultar la contraseña (con puntos)
+                txtBox_Contraseña_login.PasswordChar = '●';  // Usar puntos
+                pbVerContraseña.Image = Sga.Properties.Resources.ojo1;  // Imagen de "ojo cerrado"
+            }
+        }
     }
 }

@@ -40,8 +40,10 @@
             this.lblPerdida = new System.Windows.Forms.LinkLabel();
             this.lbl_Registrarse = new System.Windows.Forms.Label();
             this.lbl_o = new System.Windows.Forms.Label();
+            this.pbVerContraseña = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -150,6 +152,7 @@
             // lblPerdida
             // 
             this.lblPerdida.AutoSize = true;
+            this.lblPerdida.BackColor = System.Drawing.Color.Transparent;
             this.lblPerdida.Location = new System.Drawing.Point(213, 289);
             this.lblPerdida.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerdida.Name = "lblPerdida";
@@ -161,6 +164,7 @@
             // lbl_Registrarse
             // 
             this.lbl_Registrarse.AutoSize = true;
+            this.lbl_Registrarse.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Registrarse.Location = new System.Drawing.Point(87, 289);
             this.lbl_Registrarse.Name = "lbl_Registrarse";
             this.lbl_Registrarse.Size = new System.Drawing.Size(102, 13);
@@ -173,11 +177,25 @@
             // lbl_o
             // 
             this.lbl_o.AutoSize = true;
+            this.lbl_o.BackColor = System.Drawing.Color.Transparent;
             this.lbl_o.Location = new System.Drawing.Point(195, 289);
             this.lbl_o.Name = "lbl_o";
             this.lbl_o.Size = new System.Drawing.Size(13, 13);
             this.lbl_o.TabIndex = 9;
             this.lbl_o.Text = "o";
+            // 
+            // pbVerContraseña
+            // 
+            this.pbVerContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.pbVerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbVerContraseña.Image = global::Sga.Properties.Resources.ojo1;
+            this.pbVerContraseña.Location = new System.Drawing.Point(355, 185);
+            this.pbVerContraseña.Name = "pbVerContraseña";
+            this.pbVerContraseña.Size = new System.Drawing.Size(26, 26);
+            this.pbVerContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVerContraseña.TabIndex = 10;
+            this.pbVerContraseña.TabStop = false;
+            this.pbVerContraseña.Click += new System.EventHandler(this.pbVerContraseña_Click);
             // 
             // Form1
             // 
@@ -186,6 +204,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(444, 311);
+            this.Controls.Add(this.pbVerContraseña);
             this.Controls.Add(this.lbl_o);
             this.Controls.Add(this.lbl_Registrarse);
             this.Controls.Add(this.lblPerdida);
@@ -205,6 +224,7 @@
             this.Text = "Inicio de Sesion";
             ((System.ComponentModel.ISupportInitialize)(this.pcCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,6 +243,7 @@
         private System.Windows.Forms.LinkLabel lblPerdida;
         private System.Windows.Forms.Label lbl_Registrarse;
         private System.Windows.Forms.Label lbl_o;
+        private System.Windows.Forms.PictureBox pbVerContraseña;
     }
 }
 
