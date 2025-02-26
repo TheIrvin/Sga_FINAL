@@ -15,97 +15,75 @@ namespace Sga
 
         public bool RegistrarAlumno(string gmail, string contraseña, string nombreCompleto, string cedula, string nombrePadre, string nombreMadre, string telefono)
         {
-            try
+            using (SqlConnection con = conexion.AbrirConexion())
             {
-                using (SqlConnection con = conexion.AbrirConexion())
+                SqlTransaction transaction = con.BeginTransaction();
+                try
                 {
-                    SqlTransaction transaction = con.BeginTransaction();
+                    // Insertar en la tabla Usuarios primero
+                    string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Alumno')";
+                    SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con, transaction);
+                    cmdUsuarios.Parameters.AddWithValue("@Gmail", gmail);
+                    cmdUsuarios.Parameters.AddWithValue("@Contraseña", contraseña);
+                    int usuarioID = (int)cmdUsuarios.ExecuteScalar();
 
-                    try
-                    {
-                        // Insertar en la tabla Usuarios primero
-                        string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Alumno')";
-                        SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con, transaction);
-                        cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = gmail;
-                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = contraseña;
+                    // Insertar en la tabla Alumnos
+                    string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
+                                          "VALUES (@UsuarioID, @NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
+                    SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con, transaction);
+                    cmdAlumnos.Parameters.AddWithValue("@UsuarioID", usuarioID);
+                    cmdAlumnos.Parameters.AddWithValue("@NombreCompleto", nombreCompleto);
+                    cmdAlumnos.Parameters.AddWithValue("@Cedula", cedula);
+                    cmdAlumnos.Parameters.AddWithValue("@NombrePadre", nombrePadre);
+                    cmdAlumnos.Parameters.AddWithValue("@NombreMadre", nombreMadre);
+                    cmdAlumnos.Parameters.AddWithValue("@Telefono", telefono);
+                    cmdAlumnos.Parameters.AddWithValue("@Gmail", gmail);
 
-                        int usuarioID = (int)cmdUsuarios.ExecuteScalar();
-
-                        // Insertar en la tabla Alumnos con la relación a Usuarios
-                        string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
-                                              "VALUES (@UsuarioID, @NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
-                        SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con, transaction);
-                        cmdAlumnos.Parameters.Add("@UsuarioID", SqlDbType.Int).Value = usuarioID;
-                        cmdAlumnos.Parameters.Add("@NombreCompleto", SqlDbType.VarChar).Value = nombreCompleto;
-                        cmdAlumnos.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = cedula;
-                        cmdAlumnos.Parameters.Add("@NombrePadre", SqlDbType.VarChar).Value = nombrePadre;
-                        cmdAlumnos.Parameters.Add("@NombreMadre", SqlDbType.VarChar).Value = nombreMadre;
-                        cmdAlumnos.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = telefono;
-                        cmdAlumnos.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = gmail;
-
-                        cmdAlumnos.ExecuteNonQuery();
-
-                        transaction.Commit();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        MessageBox.Show("Error al registrar alumno: " + ex.Message);
-                        return false;
-                    }
+                    cmdAlumnos.ExecuteNonQuery();
+                    transaction.Commit();
+                    return true;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
-                return false;
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Error al registrar alumno: " + ex.Message);
+                    return false;
+                }
             }
         }
 
         public bool RegistrarProfesor(string nombres, string apellidos, string cedula, string telefono, string gmail, string contraseña)
         {
-            try
+            using (SqlConnection con = conexion.AbrirConexion())
             {
-                using (SqlConnection con = conexion.AbrirConexion())
+                SqlTransaction transaction = con.BeginTransaction();
+                try
                 {
-                    SqlTransaction transaction = con.BeginTransaction();
+                    string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Profesor')";
+                    SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con, transaction);
+                    cmdUsuarios.Parameters.AddWithValue("@Gmail", gmail);
+                    cmdUsuarios.Parameters.AddWithValue("@Contraseña", contraseña);
+                    int usuarioID = (int)cmdUsuarios.ExecuteScalar();
 
-                    try
-                    {
-                        string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Profesor')";
-                        SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con, transaction);
-                        cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = gmail;
-                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = contraseña;
+                    string queryProfesores = "INSERT INTO Profesores (UsuarioID, Nombres, Apellidos, Cedula, Telefono, Gmail) VALUES (@UsuarioID, @Nombres, @Apellidos, @Cedula, @Telefono, @Gmail)";
+                    SqlCommand cmdProfesores = new SqlCommand(queryProfesores, con, transaction);
+                    cmdProfesores.Parameters.AddWithValue("@UsuarioID", usuarioID);
+                    cmdProfesores.Parameters.AddWithValue("@Nombres", nombres);
+                    cmdProfesores.Parameters.AddWithValue("@Apellidos", apellidos);
+                    cmdProfesores.Parameters.AddWithValue("@Cedula", cedula);
+                    cmdProfesores.Parameters.AddWithValue("@Telefono", telefono);
+                    cmdProfesores.Parameters.AddWithValue("@Gmail", gmail);
 
-                        int usuarioID = (int)cmdUsuarios.ExecuteScalar();
-
-                        string queryProfesores = "INSERT INTO Profesores (UsuarioID, Nombres, Apellidos, Cedula, Telefono, Gmail) VALUES (@UsuarioID, @Nombres, @Apellidos, @Cedula, @Telefono, @Gmail)";
-                        SqlCommand cmdProfesores = new SqlCommand(queryProfesores, con, transaction);
-                        cmdProfesores.Parameters.Add("@UsuarioID", SqlDbType.Int).Value = usuarioID;
-                        cmdProfesores.Parameters.Add("@Nombres", SqlDbType.VarChar).Value = nombres;
-                        cmdProfesores.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = apellidos;
-                        cmdProfesores.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = cedula;
-                        cmdProfesores.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = telefono;
-                        cmdProfesores.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = gmail;
-
-                        cmdProfesores.ExecuteNonQuery();
-
-                        transaction.Commit();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        MessageBox.Show("Error al registrar profesor: " + ex.Message);
-                        return false;
-                    }
+                    cmdProfesores.ExecuteNonQuery();
+                    transaction.Commit();
+                    return true;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
-                return false;
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Error al registrar profesor: " + ex.Message);
+                    return false;
+                }
             }
         }
     }

@@ -18,7 +18,6 @@ namespace Sga
         public GestionEstudiantes()
         {
             InitializeComponent();
-            CargarDatos();
         }
 
         private void CargarDatos()
@@ -60,16 +59,6 @@ namespace Sga
         private void lbnEliminar_MouseLeave(object sender, EventArgs e)
         {
             lbnEliminar.Size = new Size(102, 33);
-        }
-
-        private void lbnActualizar_MouseEnter(object sender, EventArgs e)
-        {
-            lbnActualizar.Size = new Size(103, 34);
-        }
-
-        private void lbnActualizar_MouseLeave(object sender, EventArgs e)
-        {
-            lbnActualizar.Size = new Size(102, 33);
         }
 
         private void lbnConfirmar_Click(object sender, EventArgs e)
@@ -124,7 +113,20 @@ namespace Sga
                     alumnoID = null; // Resetear ID después de actualizar
                 }
             }
+            LimpiarCampos();
             CargarDatos();
+        }
+
+        private void LimpiarCampos()
+        {
+            // Limpiar todos los TextBox
+            txtBox_G_nombresAlumno.Clear();
+            txtBox_G_cédulaAlumno.Clear();
+            txtBox_G_nombresPadre.Clear();
+            txtBox_G_nombres_madre.Clear();
+            txtBox_G_telefono.Clear();
+            txtBox_G_Gmail.Clear();
+            txtContraseñaEstudiante.Clear();
         }
 
         private void dvg_Gestion_estudiante_CellClick(object sender, DataGridViewCellEventArgs e)

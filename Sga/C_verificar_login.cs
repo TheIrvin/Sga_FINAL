@@ -19,15 +19,15 @@ namespace Sga
                 try
                 {
                     conexion.Open();
-
                     string query = "SELECT COUNT(*) FROM Usuarios WHERE Gmail = @Gmail AND Contraseña = @Contraseña";
-                    SqlCommand cmd = new SqlCommand(query, conexion);
-                    cmd.Parameters.AddWithValue("@Gmail", gmail);
-                    cmd.Parameters.AddWithValue("@Contraseña", contraseña);
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Gmail", gmail);
+                        cmd.Parameters.AddWithValue("@Contraseña", contraseña);
 
-                    int cuentaUsuarios = (int)cmd.ExecuteScalar();
-
-                    return cuentaUsuarios > 0;
+                        int cuentaUsuarios = (int)cmd.ExecuteScalar();
+                        return cuentaUsuarios > 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -44,12 +44,12 @@ namespace Sga
                 try
                 {
                     conexion.Open();
-
                     string query = "SELECT TipoUsuario FROM Usuarios WHERE Gmail = @Gmail";
-                    SqlCommand cmd = new SqlCommand(query, conexion);
-                    cmd.Parameters.AddWithValue("@Gmail", gmail);
-
-                    return cmd.ExecuteScalar()?.ToString();
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Gmail", gmail);
+                        return cmd.ExecuteScalar()?.ToString();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -58,6 +58,5 @@ namespace Sga
                 }
             }
         }
-
     }
 }

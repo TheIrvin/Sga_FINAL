@@ -36,7 +36,6 @@
             this.lblCedula = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblRegistroEstudiante = new System.Windows.Forms.Label();
-            this.lbnActualizar = new System.Windows.Forms.Button();
             this.dvg_Gestion_estudiante = new System.Windows.Forms.DataGridView();
             this.txtBox_G_nombres_madre = new System.Windows.Forms.TextBox();
             this.txtBox_G_telefono = new System.Windows.Forms.TextBox();
@@ -57,7 +56,7 @@
             this.lbnEditar.FlatAppearance.BorderSize = 0;
             this.lbnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbnEditar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnEditar.Location = new System.Drawing.Point(585, 127);
+            this.lbnEditar.Location = new System.Drawing.Point(585, 163);
             this.lbnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnEditar.Name = "lbnEditar";
             this.lbnEditar.Size = new System.Drawing.Size(102, 33);
@@ -95,7 +94,7 @@
             this.lbnConfirmar.FlatAppearance.BorderSize = 0;
             this.lbnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbnConfirmar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnConfirmar.Location = new System.Drawing.Point(585, 67);
+            this.lbnConfirmar.Location = new System.Drawing.Point(585, 89);
             this.lbnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnConfirmar.Name = "lbnConfirmar";
             this.lbnConfirmar.Size = new System.Drawing.Size(102, 33);
@@ -158,23 +157,6 @@
             this.lblRegistroEstudiante.Size = new System.Drawing.Size(268, 31);
             this.lblRegistroEstudiante.TabIndex = 11;
             this.lblRegistroEstudiante.Text = "Gestionar Estudiantes";
-            // 
-            // lbnActualizar
-            // 
-            this.lbnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
-            this.lbnActualizar.FlatAppearance.BorderSize = 0;
-            this.lbnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbnActualizar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnActualizar.Location = new System.Drawing.Point(585, 185);
-            this.lbnActualizar.Margin = new System.Windows.Forms.Padding(2);
-            this.lbnActualizar.Name = "lbnActualizar";
-            this.lbnActualizar.Size = new System.Drawing.Size(102, 33);
-            this.lbnActualizar.TabIndex = 27;
-            this.lbnActualizar.Text = "Actualizar";
-            this.lbnActualizar.UseVisualStyleBackColor = false;
-            this.lbnActualizar.Click += new System.EventHandler(this.lbnActualizar_Click);
-            this.lbnActualizar.MouseEnter += new System.EventHandler(this.lbnActualizar_MouseEnter);
-            this.lbnActualizar.MouseLeave += new System.EventHandler(this.lbnActualizar_MouseLeave);
             // 
             // dvg_Gestion_estudiante
             // 
@@ -325,7 +307,6 @@
             this.Controls.Add(this.txtBox_G_Gmail);
             this.Controls.Add(this.txtBox_G_nombresPadre);
             this.Controls.Add(this.dvg_Gestion_estudiante);
-            this.Controls.Add(this.lbnActualizar);
             this.Controls.Add(this.lbnEditar);
             this.Controls.Add(this.txtBox_G_cédulaAlumno);
             this.Controls.Add(this.txtBox_G_nombresAlumno);
@@ -353,7 +334,6 @@
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRegistroEstudiante;
-        private System.Windows.Forms.Button lbnActualizar;
         private System.Windows.Forms.DataGridView dvg_Gestion_estudiante;
         private System.Windows.Forms.TextBox txtBox_G_nombres_madre;
         private System.Windows.Forms.TextBox txtBox_G_telefono;
