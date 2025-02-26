@@ -211,6 +211,7 @@
             this.btnCerrarMP.Size = new System.Drawing.Size(40, 40);
             this.btnCerrarMP.TabIndex = 6;
             this.btnCerrarMP.UseVisualStyleBackColor = false;
+            this.btnCerrarMP.Click += new System.EventHandler(this.btnCerrarMP_Click);
             // 
             // btnRestMP
             // 

@@ -55,7 +55,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(85, 41);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "SGA";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // lbllUsu
             // 
@@ -90,6 +89,8 @@
             this.txtBox_Usuario_login.Size = new System.Drawing.Size(310, 19);
             this.txtBox_Usuario_login.TabIndex = 2;
             this.txtBox_Usuario_login.Text = "USUARIO";
+            this.txtBox_Usuario_login.Enter += new System.EventHandler(this.txtUsu_Enter);
+            this.txtBox_Usuario_login.Leave += new System.EventHandler(this.txtUsu_Leave);
             // 
             // txtBox_Contraseña_login
             // 
@@ -102,6 +103,8 @@
             this.txtBox_Contraseña_login.Size = new System.Drawing.Size(309, 19);
             this.txtBox_Contraseña_login.TabIndex = 3;
             this.txtBox_Contraseña_login.Text = "CONTRASEÑA";
+            this.txtBox_Contraseña_login.Enter += new System.EventHandler(this.txtContra_Enter);
+            this.txtBox_Contraseña_login.Leave += new System.EventHandler(this.txtContra_Leave);
             // 
             // btnAcceder
             // 
@@ -142,6 +145,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblPerdida
             // 
@@ -162,6 +166,9 @@
             this.lbl_Registrarse.Size = new System.Drawing.Size(102, 13);
             this.lbl_Registrarse.TabIndex = 8;
             this.lbl_Registrarse.Text = "Registrar Profesores";
+            this.lbl_Registrarse.Click += new System.EventHandler(this.lbl_Registrarse_Click);
+            this.lbl_Registrarse.MouseEnter += new System.EventHandler(this.lbl_Registrarse_MouseEnter);
+            this.lbl_Registrarse.MouseLeave += new System.EventHandler(this.lbl_Registrarse_MouseLeave);
             // 
             // lbl_o
             // 

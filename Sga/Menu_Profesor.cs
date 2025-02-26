@@ -46,5 +46,10 @@ namespace Sga
         {
             AbrirEnPanelCliente(new GestionEstudiantes());
         }
+
+        private void btnCerrarMP_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -17,11 +17,6 @@ namespace Sga
             InitializeComponent();
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pcCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -63,26 +58,6 @@ namespace Sga
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void txtUsu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsu_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsu_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsu_MouseLeave(object sender, EventArgs e)
-        {
-
         }
 
         private void txtUsu_Enter(object sender, EventArgs e)

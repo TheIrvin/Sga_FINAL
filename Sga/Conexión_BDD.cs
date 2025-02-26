@@ -20,10 +20,10 @@ namespace Sga
 
         public Conexión_BDD()
         {
-            cadenaConexion = "Server=THEIRVIN\\SQLEXPRESS;" +
+            cadenaConexion = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;" +
                 "Database=SGA_bdd;" +
-                "User Id=SGA_bdd;" +
-                "Password=102030;";
+                "User Id=AccesoChari;" +
+                "Password=accesochari;";
 
             bdd_Con = new SqlConnection(cadenaConexion);
         }

@@ -80,7 +80,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(43, 243);
+            this.label3.Location = new System.Drawing.Point(103, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(260, 20);
             this.label3.TabIndex = 108;
@@ -91,7 +91,7 @@
             this.txtBox_nombres_madre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_nombres_madre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_nombres_madre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_nombres_madre.Location = new System.Drawing.Point(356, 241);
+            this.txtBox_nombres_madre.Location = new System.Drawing.Point(416, 241);
             this.txtBox_nombres_madre.Name = "txtBox_nombres_madre";
             this.txtBox_nombres_madre.Size = new System.Drawing.Size(175, 19);
             this.txtBox_nombres_madre.TabIndex = 91;
@@ -103,7 +103,7 @@
             this.bt_Regresar_Estudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Regresar_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Regresar_Estudiante.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bt_Regresar_Estudiante.Location = new System.Drawing.Point(355, 385);
+            this.bt_Regresar_Estudiante.Location = new System.Drawing.Point(415, 569);
             this.bt_Regresar_Estudiante.Name = "bt_Regresar_Estudiante";
             this.bt_Regresar_Estudiante.Size = new System.Drawing.Size(176, 53);
             this.bt_Regresar_Estudiante.TabIndex = 96;
@@ -116,7 +116,7 @@
             this.txt_Contraseña_padres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txt_Contraseña_padres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contraseña_padres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Contraseña_padres.Location = new System.Drawing.Point(356, 341);
+            this.txt_Contraseña_padres.Location = new System.Drawing.Point(416, 341);
             this.txt_Contraseña_padres.Name = "txt_Contraseña_padres";
             this.txt_Contraseña_padres.Size = new System.Drawing.Size(175, 19);
             this.txt_Contraseña_padres.TabIndex = 94;
@@ -128,7 +128,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(43, 343);
+            this.label1.Location = new System.Drawing.Point(103, 343);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 105;
@@ -144,7 +144,7 @@
             this.panel_sga.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_sga.Location = new System.Drawing.Point(0, 0);
             this.panel_sga.Name = "panel_sga";
-            this.panel_sga.Size = new System.Drawing.Size(584, 70);
+            this.panel_sga.Size = new System.Drawing.Size(704, 81);
             this.panel_sga.TabIndex = 103;
             // 
             // btnRestauRegisProfe
@@ -157,7 +157,7 @@
             this.btnRestauRegisProfe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
             this.btnRestauRegisProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnRestauRegisProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestauRegisProfe.Location = new System.Drawing.Point(507, 0);
+            this.btnRestauRegisProfe.Location = new System.Drawing.Point(627, 0);
             this.btnRestauRegisProfe.Name = "btnRestauRegisProfe";
             this.btnRestauRegisProfe.Size = new System.Drawing.Size(40, 40);
             this.btnRestauRegisProfe.TabIndex = 4;
@@ -174,7 +174,7 @@
             this.btnMiniRegisProfe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
             this.btnMiniRegisProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnMiniRegisProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMiniRegisProfe.Location = new System.Drawing.Point(474, 0);
+            this.btnMiniRegisProfe.Location = new System.Drawing.Point(594, 0);
             this.btnMiniRegisProfe.Name = "btnMiniRegisProfe";
             this.btnMiniRegisProfe.Size = new System.Drawing.Size(40, 40);
             this.btnMiniRegisProfe.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.btnMaxiRegisProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnMaxiRegisProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxiRegisProfe.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnMaxiRegisProfe.Location = new System.Drawing.Point(507, 0);
+            this.btnMaxiRegisProfe.Location = new System.Drawing.Point(627, 0);
             this.btnMaxiRegisProfe.Name = "btnMaxiRegisProfe";
             this.btnMaxiRegisProfe.Size = new System.Drawing.Size(40, 40);
             this.btnMaxiRegisProfe.TabIndex = 3;
@@ -207,7 +207,7 @@
             this.bt_CerrarRegis_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
             this.bt_CerrarRegis_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.bt_CerrarRegis_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_CerrarRegis_alumno.Location = new System.Drawing.Point(544, 0);
+            this.bt_CerrarRegis_alumno.Location = new System.Drawing.Point(664, 0);
             this.bt_CerrarRegis_alumno.Name = "bt_CerrarRegis_alumno";
             this.bt_CerrarRegis_alumno.Size = new System.Drawing.Size(40, 40);
             this.bt_CerrarRegis_alumno.TabIndex = 1;
@@ -221,7 +221,7 @@
             this.lblRegistroDocente.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistroDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistroDocente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblRegistroDocente.Location = new System.Drawing.Point(135, 93);
+            this.lblRegistroDocente.Location = new System.Drawing.Point(195, 93);
             this.lblRegistroDocente.Name = "lblRegistroDocente";
             this.lblRegistroDocente.Size = new System.Drawing.Size(311, 31);
             this.lblRegistroDocente.TabIndex = 102;
@@ -232,7 +232,7 @@
             this.txtBox_teléfono_padres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_teléfono_padres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_teléfono_padres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_teléfono_padres.Location = new System.Drawing.Point(356, 308);
+            this.txtBox_teléfono_padres.Location = new System.Drawing.Point(416, 308);
             this.txtBox_teléfono_padres.Name = "txtBox_teléfono_padres";
             this.txtBox_teléfono_padres.Size = new System.Drawing.Size(175, 19);
             this.txtBox_teléfono_padres.TabIndex = 93;
@@ -244,7 +244,7 @@
             this.bt_crearCuenta_Estudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_crearCuenta_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_crearCuenta_Estudiante.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bt_crearCuenta_Estudiante.Location = new System.Drawing.Point(52, 385);
+            this.bt_crearCuenta_Estudiante.Location = new System.Drawing.Point(112, 569);
             this.bt_crearCuenta_Estudiante.Name = "bt_crearCuenta_Estudiante";
             this.bt_crearCuenta_Estudiante.Size = new System.Drawing.Size(166, 53);
             this.bt_crearCuenta_Estudiante.TabIndex = 95;
@@ -257,7 +257,7 @@
             this.txtBox_nombres_estudiante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_nombres_estudiante.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_nombres_estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_nombres_estudiante.Location = new System.Drawing.Point(356, 141);
+            this.txtBox_nombres_estudiante.Location = new System.Drawing.Point(416, 141);
             this.txtBox_nombres_estudiante.Name = "txtBox_nombres_estudiante";
             this.txtBox_nombres_estudiante.Size = new System.Drawing.Size(175, 19);
             this.txtBox_nombres_estudiante.TabIndex = 88;
@@ -269,7 +269,7 @@
             this.lbl_profesor_nombre.BackColor = System.Drawing.Color.Transparent;
             this.lbl_profesor_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_profesor_nombre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_profesor_nombre.Location = new System.Drawing.Point(43, 143);
+            this.lbl_profesor_nombre.Location = new System.Drawing.Point(103, 143);
             this.lbl_profesor_nombre.Name = "lbl_profesor_nombre";
             this.lbl_profesor_nombre.Size = new System.Drawing.Size(282, 20);
             this.lbl_profesor_nombre.TabIndex = 100;
@@ -282,7 +282,7 @@
             this.lbl_profesor_cédula.BackColor = System.Drawing.Color.Transparent;
             this.lbl_profesor_cédula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_profesor_cédula.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_profesor_cédula.Location = new System.Drawing.Point(43, 210);
+            this.lbl_profesor_cédula.Location = new System.Drawing.Point(103, 210);
             this.lbl_profesor_cédula.Name = "lbl_profesor_cédula";
             this.lbl_profesor_cédula.Size = new System.Drawing.Size(242, 20);
             this.lbl_profesor_cédula.TabIndex = 99;
@@ -295,7 +295,7 @@
             this.lbl_profesor_gmail.BackColor = System.Drawing.Color.Transparent;
             this.lbl_profesor_gmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_profesor_gmail.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_profesor_gmail.Location = new System.Drawing.Point(43, 274);
+            this.lbl_profesor_gmail.Location = new System.Drawing.Point(103, 274);
             this.lbl_profesor_gmail.Name = "lbl_profesor_gmail";
             this.lbl_profesor_gmail.Size = new System.Drawing.Size(55, 20);
             this.lbl_profesor_gmail.TabIndex = 98;
@@ -306,7 +306,7 @@
             this.txt_gmail_padres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txt_gmail_padres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_gmail_padres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gmail_padres.Location = new System.Drawing.Point(356, 274);
+            this.txt_gmail_padres.Location = new System.Drawing.Point(416, 274);
             this.txt_gmail_padres.Name = "txt_gmail_padres";
             this.txt_gmail_padres.Size = new System.Drawing.Size(175, 19);
             this.txt_gmail_padres.TabIndex = 92;
@@ -316,7 +316,7 @@
             this.txtBox_nombres_padre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_nombres_padre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_nombres_padre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_nombres_padre.Location = new System.Drawing.Point(356, 208);
+            this.txtBox_nombres_padre.Location = new System.Drawing.Point(416, 208);
             this.txtBox_nombres_padre.Name = "txtBox_nombres_padre";
             this.txtBox_nombres_padre.Size = new System.Drawing.Size(175, 19);
             this.txtBox_nombres_padre.TabIndex = 90;
@@ -326,7 +326,7 @@
             this.txtBox_cédula_estudiante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_cédula_estudiante.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_cédula_estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_cédula_estudiante.Location = new System.Drawing.Point(356, 174);
+            this.txtBox_cédula_estudiante.Location = new System.Drawing.Point(416, 174);
             this.txtBox_cédula_estudiante.Name = "txtBox_cédula_estudiante";
             this.txtBox_cédula_estudiante.Size = new System.Drawing.Size(175, 19);
             this.txtBox_cédula_estudiante.TabIndex = 89;
@@ -338,7 +338,7 @@
             this.lbl_profesor_teléfono.BackColor = System.Drawing.Color.Transparent;
             this.lbl_profesor_teléfono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_profesor_teléfono.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_profesor_teléfono.Location = new System.Drawing.Point(42, 308);
+            this.lbl_profesor_teléfono.Location = new System.Drawing.Point(102, 308);
             this.lbl_profesor_teléfono.Name = "lbl_profesor_teléfono";
             this.lbl_profesor_teléfono.Size = new System.Drawing.Size(79, 20);
             this.lbl_profesor_teléfono.TabIndex = 97;
@@ -359,7 +359,7 @@
             this.lbl_profesor_apellidos.BackColor = System.Drawing.Color.Transparent;
             this.lbl_profesor_apellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_profesor_apellidos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_profesor_apellidos.Location = new System.Drawing.Point(43, 176);
+            this.lbl_profesor_apellidos.Location = new System.Drawing.Point(103, 176);
             this.lbl_profesor_apellidos.Name = "lbl_profesor_apellidos";
             this.lbl_profesor_apellidos.Size = new System.Drawing.Size(278, 20);
             this.lbl_profesor_apellidos.TabIndex = 95;
@@ -379,7 +379,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sga.Properties.Resources.modern_apartment_with_clean_bright_design_abstract_wallpaper_generated_by_ai_modified__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 472);
+            this.ClientSize = new System.Drawing.Size(704, 656);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBox_nombres_madre);
             this.Controls.Add(this.bt_Regresar_Estudiante);

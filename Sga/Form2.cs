@@ -24,5 +24,55 @@ namespace Sga
         {
             dvg_Gestion_estudiante.DataSource = conSQL.retornaRegistros("Select * from Alumnos");
         }
+
+        private void lbnEditar_MouseEnter(object sender, EventArgs e)
+        {
+            lbnEditar.Size = new Size(103, 34);
+        }
+
+        private void lbnEditar_MouseLeave(object sender, EventArgs e)
+        {
+            lbnEditar.Size = new Size(102, 33);
+        }
+
+        private void lbnConfirmar_MouseLeave(object sender, EventArgs e)
+        {
+            lbnConfirmar.Size = new Size(102, 33);
+        }
+
+        private void lbnConfirmar_MouseEnter(object sender, EventArgs e)
+        {
+            lbnConfirmar.Size = new Size(103, 34);
+        }
+
+        private void lbnAtras_MouseEnter(object sender, EventArgs e)
+        {
+            lbnAtras.Size = new Size(103, 34);
+        }
+
+        private void lbnAtras_MouseLeave(object sender, EventArgs e)
+        {
+            lbnAtras.Size = new Size(102, 33);
+        }
+
+        private void lbnEliminar_MouseEnter(object sender, EventArgs e)
+        {
+            lbnEliminar.Size = new Size(103, 34);
+        }
+
+        private void lbnEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            lbnEliminar.Size = new Size(102, 33);
+        }
+
+        private void lbnActualizar_MouseEnter(object sender, EventArgs e)
+        {
+            lbnActualizar.Size = new Size(103, 34);
+        }
+
+        private void lbnActualizar_MouseLeave(object sender, EventArgs e)
+        {
+            lbnActualizar.Size = new Size(102, 33);
+        }
     }
 }
