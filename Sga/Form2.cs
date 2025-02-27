@@ -31,15 +31,7 @@ namespace Sga
             dvg_Gestion_estudiante.DataSource = conSQL.retornaRegistros("Select * from Alumnos");
         }
 
-        private void lbnEditar_MouseEnter(object sender, EventArgs e)
-        {
-            lbnEditar.Size = new Size(103, 34);
-        }
-
-        private void lbnEditar_MouseLeave(object sender, EventArgs e)
-        {
-            lbnEditar.Size = new Size(102, 33);
-        }
+       
 
         private void lbnConfirmar_MouseLeave(object sender, EventArgs e)
         {
@@ -105,7 +97,7 @@ namespace Sga
                         cmdAlumnos.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
                         cmdAlumnos.ExecuteNonQuery();
                     }
-                    string queryUsuarios = "UPDATE Usuarios SET Contraseña=@Contraseña WHERE Gmail=@Gmail";
+                    string queryUsuarios = "UPDATE Usuarios SET TipoUsuario='Alumno' WHERE Gmail=@Gmail";
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
@@ -145,6 +137,7 @@ namespace Sga
 
         private void lbnEliminar_Click(object sender, EventArgs e)
         {
+            
             if (dvg_Gestion_estudiante.SelectedRows.Count > 0)
             {
                 string nombreAlumno = txtBox_G_nombresAlumno.Text;
@@ -178,6 +171,11 @@ namespace Sga
         }
 
         private void txtBox_G_nombresAlumno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbnEditar_Click(object sender, EventArgs e)
         {
 
         }

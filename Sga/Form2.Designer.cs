@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbnEditar = new System.Windows.Forms.Button();
             this.txtBox_G_cédulaAlumno = new System.Windows.Forms.TextBox();
             this.txtBox_G_nombresAlumno = new System.Windows.Forms.TextBox();
             this.lbnConfirmar = new System.Windows.Forms.Button();
@@ -48,22 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvg_Gestion_estudiante)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbnEditar
-            // 
-            this.lbnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
-            this.lbnEditar.FlatAppearance.BorderSize = 0;
-            this.lbnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbnEditar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnEditar.Location = new System.Drawing.Point(585, 163);
-            this.lbnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.lbnEditar.Name = "lbnEditar";
-            this.lbnEditar.Size = new System.Drawing.Size(102, 33);
-            this.lbnEditar.TabIndex = 26;
-            this.lbnEditar.Text = "Editar ";
-            this.lbnEditar.UseVisualStyleBackColor = false;
-            this.lbnEditar.MouseEnter += new System.EventHandler(this.lbnEditar_MouseEnter);
-            this.lbnEditar.MouseLeave += new System.EventHandler(this.lbnEditar_MouseLeave);
-            // 
             // txtBox_G_cédulaAlumno
             // 
             this.txtBox_G_cédulaAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
@@ -71,6 +54,7 @@
             this.txtBox_G_cédulaAlumno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_G_cédulaAlumno.Location = new System.Drawing.Point(333, 101);
             this.txtBox_G_cédulaAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_G_cédulaAlumno.MaxLength = 10;
             this.txtBox_G_cédulaAlumno.Name = "txtBox_G_cédulaAlumno";
             this.txtBox_G_cédulaAlumno.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_cédulaAlumno.TabIndex = 19;
@@ -93,7 +77,7 @@
             this.lbnConfirmar.FlatAppearance.BorderSize = 0;
             this.lbnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbnConfirmar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnConfirmar.Location = new System.Drawing.Point(585, 89);
+            this.lbnConfirmar.Location = new System.Drawing.Point(585, 98);
             this.lbnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnConfirmar.Name = "lbnConfirmar";
             this.lbnConfirmar.Size = new System.Drawing.Size(102, 33);
@@ -110,7 +94,7 @@
             this.lbnEliminar.FlatAppearance.BorderSize = 0;
             this.lbnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnEliminar.Location = new System.Drawing.Point(585, 240);
+            this.lbnEliminar.Location = new System.Drawing.Point(585, 213);
             this.lbnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnEliminar.Name = "lbnEliminar";
             this.lbnEliminar.Size = new System.Drawing.Size(102, 33);
@@ -129,9 +113,9 @@
             this.lblCedula.Location = new System.Drawing.Point(21, 98);
             this.lblCedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(180, 24);
+            this.lblCedula.Size = new System.Drawing.Size(185, 24);
             this.lblCedula.TabIndex = 14;
-            this.lblCedula.Text = "Número de Cédula:";
+            this.lblCedula.Text = "Cédula del Alumno:";
             // 
             // label1
             // 
@@ -191,6 +175,7 @@
             this.txtBox_G_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_G_telefono.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_G_telefono.Location = new System.Drawing.Point(333, 216);
+            this.txtBox_G_telefono.MaxLength = 10;
             this.txtBox_G_telefono.Name = "txtBox_G_telefono";
             this.txtBox_G_telefono.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_telefono.TabIndex = 22;
@@ -281,7 +266,6 @@
             this.Controls.Add(this.txtBox_G_Gmail);
             this.Controls.Add(this.txtBox_G_nombresPadre);
             this.Controls.Add(this.dvg_Gestion_estudiante);
-            this.Controls.Add(this.lbnEditar);
             this.Controls.Add(this.txtBox_G_cédulaAlumno);
             this.Controls.Add(this.txtBox_G_nombresAlumno);
             this.Controls.Add(this.lbnConfirmar);
@@ -299,8 +283,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button lbnEditar;
         private System.Windows.Forms.TextBox txtBox_G_cédulaAlumno;
         private System.Windows.Forms.TextBox txtBox_G_nombresAlumno;
         private System.Windows.Forms.Button lbnConfirmar;

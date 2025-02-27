@@ -137,6 +137,7 @@
             this.txtbox_profesor_teléfono.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_profesor_teléfono.Location = new System.Drawing.Point(377, 300);
             this.txtbox_profesor_teléfono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbox_profesor_teléfono.MaxLength = 10;
             this.txtbox_profesor_teléfono.Name = "txtbox_profesor_teléfono";
             this.txtbox_profesor_teléfono.Size = new System.Drawing.Size(204, 14);
             this.txtbox_profesor_teléfono.TabIndex = 5;
@@ -149,6 +150,7 @@
             this.txtbox_profesor_cédula.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbox_profesor_cédula.Location = new System.Drawing.Point(377, 256);
             this.txtbox_profesor_cédula.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbox_profesor_cédula.MaxLength = 10;
             this.txtbox_profesor_cédula.Name = "txtbox_profesor_cédula";
             this.txtbox_profesor_cédula.Size = new System.Drawing.Size(204, 14);
             this.txtbox_profesor_cédula.TabIndex = 4;
