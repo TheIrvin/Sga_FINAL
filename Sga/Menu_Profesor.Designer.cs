@@ -30,6 +30,7 @@
         {
             this.panel_menuProfesor = new System.Windows.Forms.Panel();
             this.panelOpciones = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarEstudiante = new System.Windows.Forms.Button();
             this.btnEnviarSMSMP = new System.Windows.Forms.Button();
             this.btnRegistrarAsisMP = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.btnCerrarMP = new System.Windows.Forms.Button();
             this.btnRestMP = new System.Windows.Forms.Button();
             this.btnMinMP = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelOpciones.SuspendLayout();
             this.panelCabeceraProfe.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,25 @@
             this.panelOpciones.Name = "panelOpciones";
             this.panelOpciones.Size = new System.Drawing.Size(198, 555);
             this.panelOpciones.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Sga.Properties.Resources.calendario;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(16, 376);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 73);
+            this.button1.TabIndex = 5;
+            this.button1.Text = " Horarios";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnAgregarEstudiante
             // 
@@ -178,6 +197,7 @@
             this.panelCabeceraProfe.Name = "panelCabeceraProfe";
             this.panelCabeceraProfe.Size = new System.Drawing.Size(932, 47);
             this.panelCabeceraProfe.TabIndex = 0;
+            this.panelCabeceraProfe.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCabeceraProfe_Paint);
             // 
             // btnMaxMP
             // 
@@ -197,6 +217,7 @@
             this.btnMaxMP.Size = new System.Drawing.Size(40, 40);
             this.btnMaxMP.TabIndex = 7;
             this.btnMaxMP.UseVisualStyleBackColor = false;
+            this.btnMaxMP.Click += new System.EventHandler(this.btnMaxMP_Click);
             // 
             // btnCerrarMP
             // 
@@ -235,6 +256,7 @@
             this.btnRestMP.TabIndex = 5;
             this.btnRestMP.UseVisualStyleBackColor = false;
             this.btnRestMP.Visible = false;
+            this.btnRestMP.Click += new System.EventHandler(this.btnRestMP_Click);
             // 
             // btnMinMP
             // 
@@ -253,25 +275,7 @@
             this.btnMinMP.Size = new System.Drawing.Size(40, 40);
             this.btnMinMP.TabIndex = 3;
             this.btnMinMP.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Sga.Properties.Resources.calendario;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(16, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 73);
-            this.button1.TabIndex = 5;
-            this.button1.Text = " Horarios";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMinMP.Click += new System.EventHandler(this.btnMinMP_Click);
             // 
             // Menu_Profesor
             // 
@@ -281,7 +285,7 @@
             this.Controls.Add(this.panel_menuProfesor);
             this.Controls.Add(this.panelOpciones);
             this.Controls.Add(this.panelCabeceraProfe);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu_Profesor";
             this.Text = "Menú_profesor";

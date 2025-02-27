@@ -25,10 +25,10 @@ namespace Sga
 
         public Conexión_BDD()
         {
-            Server = "THEIRVIN\\SQLEXPRESS";
+            Server = "DESKTOP-9SMDLH8\\SQLEXPRESS";
             Database = "SGA_bdd";
-            Usuario = "SGA_bdd";
-            Clave = "102030";
+            Usuario = "AccesoChari";
+            Clave = "accesochari";
         }
 
         public Conexión_BDD(string Server, string Database, string Usuario, string Clave)

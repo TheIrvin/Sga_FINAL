@@ -111,6 +111,7 @@
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.Transparent;
+            this.btnAcceder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.Location = new System.Drawing.Point(73, 239);
@@ -124,6 +125,7 @@
             // pcCerrar
             // 
             this.pcCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pcCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcCerrar.ErrorImage = null;
             this.pcCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pcCerrar.Image")));
             this.pcCerrar.InitialImage = null;
@@ -138,6 +140,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
@@ -165,6 +168,7 @@
             // 
             this.lbl_Registrarse.AutoSize = true;
             this.lbl_Registrarse.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Registrarse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Registrarse.Location = new System.Drawing.Point(87, 289);
             this.lbl_Registrarse.Name = "lbl_Registrarse";
             this.lbl_Registrarse.Size = new System.Drawing.Size(102, 13);

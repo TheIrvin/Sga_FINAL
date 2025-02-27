@@ -93,6 +93,16 @@ namespace Sga.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aulaa {
+            get {
+                object obj = ResourceManager.GetObject("aulaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ayuda_con_las_tareas {
             get {
                 object obj = ResourceManager.GetObject("ayuda-con-las-tareas", resourceCulture);
@@ -106,6 +116,16 @@ namespace Sga.Properties {
         internal static System.Drawing.Bitmap bloc_de_dibujo {
             get {
                 object obj = ResourceManager.GetObject("bloc-de-dibujo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonaceptar {
+            get {
+                object obj = ResourceManager.GetObject("botonaceptar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -487,6 +507,16 @@ namespace Sga.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2025_02_25_at_9_40_59_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2025-02-25 at 9.40.59 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2025_02_27_at_12_07_19 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2025-02-27 at 12.07.19", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
