@@ -284,5 +284,14 @@
   <ItemGroup>
     <None Include="Resources\seguidores %284%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadrado_vacio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadrado_LLENO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agg_Estudiante.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

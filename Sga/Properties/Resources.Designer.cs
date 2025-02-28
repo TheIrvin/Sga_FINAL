@@ -63,6 +63,16 @@ namespace Sga.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agg_Estudiante {
+            get {
+                object obj = ResourceManager.GetObject("agg_Estudiante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anadir_amigo {
             get {
                 object obj = ResourceManager.GetObject("anadir-amigo", resourceCulture);
@@ -156,6 +166,26 @@ namespace Sga.Properties {
         internal static System.Drawing.Bitmap correo {
             get {
                 object obj = ResourceManager.GetObject("correo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuadrado_LLENO {
+            get {
+                object obj = ResourceManager.GetObject("cuadrado_LLENO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuadrado_vacio2 {
+            get {
+                object obj = ResourceManager.GetObject("cuadrado_vacio2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

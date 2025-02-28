@@ -30,7 +30,7 @@
         {
             this.panel_menuProfesor = new System.Windows.Forms.Panel();
             this.panelOpciones = new System.Windows.Forms.Panel();
-            this.btnHorarioProfesor = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarEstudiante = new System.Windows.Forms.Button();
             this.btnEnviarSMSMP = new System.Windows.Forms.Button();
             this.btnRegistrarAsisMP = new System.Windows.Forms.Button();
@@ -55,7 +55,8 @@
             // 
             // panelOpciones
             // 
-            this.panelOpciones.Controls.Add(this.btnHorarioProfesor);
+            this.panelOpciones.BackgroundImage = global::Sga.Properties.Resources.PanelOpciones;
+            this.panelOpciones.Controls.Add(this.button1);
             this.panelOpciones.Controls.Add(this.btnAgregarEstudiante);
             this.panelOpciones.Controls.Add(this.btnEnviarSMSMP);
             this.panelOpciones.Controls.Add(this.btnRegistrarAsisMP);
@@ -67,23 +68,24 @@
             this.panelOpciones.Size = new System.Drawing.Size(198, 555);
             this.panelOpciones.TabIndex = 1;
             // 
-            // btnHorarioProfesor
+            // button1
             // 
-            this.btnHorarioProfesor.BackColor = System.Drawing.Color.Transparent;
-            this.btnHorarioProfesor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHorarioProfesor.FlatAppearance.BorderSize = 2;
-            this.btnHorarioProfesor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnHorarioProfesor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnHorarioProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorarioProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorarioProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorarioProfesor.Location = new System.Drawing.Point(16, 371);
-            this.btnHorarioProfesor.Name = "btnHorarioProfesor";
-            this.btnHorarioProfesor.Size = new System.Drawing.Size(170, 73);
-            this.btnHorarioProfesor.TabIndex = 5;
-            this.btnHorarioProfesor.Text = " Horarios";
-            this.btnHorarioProfesor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHorarioProfesor.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Sga.Properties.Resources.calendario;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(16, 376);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 73);
+            this.button1.TabIndex = 5;
+            this.button1.Text = " Horarios";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnAgregarEstudiante
             // 
@@ -94,8 +96,9 @@
             this.btnAgregarEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnAgregarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEstudiante.Image = global::Sga.Properties.Resources.agg_Estudiante;
             this.btnAgregarEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarEstudiante.Location = new System.Drawing.Point(16, 460);
+            this.btnAgregarEstudiante.Location = new System.Drawing.Point(16, 470);
             this.btnAgregarEstudiante.Name = "btnAgregarEstudiante";
             this.btnAgregarEstudiante.Size = new System.Drawing.Size(170, 73);
             this.btnAgregarEstudiante.TabIndex = 4;
@@ -113,6 +116,7 @@
             this.btnEnviarSMSMP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnEnviarSMSMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviarSMSMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarSMSMP.Image = global::Sga.Properties.Resources.comunicarse;
             this.btnEnviarSMSMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnviarSMSMP.Location = new System.Drawing.Point(16, 286);
             this.btnEnviarSMSMP.Name = "btnEnviarSMSMP";
@@ -131,6 +135,7 @@
             this.btnRegistrarAsisMP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnRegistrarAsisMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarAsisMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarAsisMP.Image = global::Sga.Properties.Resources.lista_de_verificacion;
             this.btnRegistrarAsisMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarAsisMP.Location = new System.Drawing.Point(16, 196);
             this.btnRegistrarAsisMP.Name = "btnRegistrarAsisMP";
@@ -150,6 +155,7 @@
             this.btnTareasMP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnTareasMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTareasMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTareasMP.Image = global::Sga.Properties.Resources.bloc_de_dibujo;
             this.btnTareasMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTareasMP.Location = new System.Drawing.Point(16, 106);
             this.btnTareasMP.Name = "btnTareasMP";
@@ -168,6 +174,7 @@
             this.btnAggAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnAggAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAggAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAggAlumnos.Image = global::Sga.Properties.Resources.anadir_amigo;
             this.btnAggAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAggAlumnos.Location = new System.Drawing.Point(16, 19);
             this.btnAggAlumnos.Name = "btnAggAlumnos";
@@ -180,6 +187,7 @@
             // 
             // panelCabeceraProfe
             // 
+            this.panelCabeceraProfe.BackgroundImage = global::Sga.Properties.Resources.WhatsApp_Image_2025_02_25_at_9_40_59_PM;
             this.panelCabeceraProfe.Controls.Add(this.btnMaxMP);
             this.panelCabeceraProfe.Controls.Add(this.btnCerrarMP);
             this.panelCabeceraProfe.Controls.Add(this.btnRestMP);
@@ -194,6 +202,7 @@
             // 
             this.btnMaxMP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaxMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaxMP.BackgroundImage = global::Sga.Properties.Resources.Icono_Maximizar;
             this.btnMaxMP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMaxMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaxMP.FlatAppearance.BorderSize = 0;
@@ -212,6 +221,7 @@
             // 
             this.btnCerrarMP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrarMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarMP.BackgroundImage = global::Sga.Properties.Resources.Icono_cerrar_FN;
             this.btnCerrarMP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrarMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarMP.FlatAppearance.BorderSize = 0;
@@ -230,6 +240,7 @@
             // 
             this.btnRestMP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestMP.BackgroundImage = global::Sga.Properties.Resources.Icono_Restaurar;
             this.btnRestMP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRestMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestMP.FlatAppearance.BorderSize = 0;
@@ -248,6 +259,7 @@
             // 
             this.btnMinMP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinMP.BackgroundImage = global::Sga.Properties.Resources.Icono_Minimizar;
             this.btnMinMP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinMP.FlatAppearance.BorderSize = 0;
@@ -294,6 +306,6 @@
         private System.Windows.Forms.Button btnEnviarSMSMP;
         private System.Windows.Forms.Panel panel_menuProfesor;
         private System.Windows.Forms.Button btnAgregarEstudiante;
-        private System.Windows.Forms.Button btnHorarioProfesor;
+        private System.Windows.Forms.Button button1;
     }
 }

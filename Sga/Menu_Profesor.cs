@@ -22,19 +22,19 @@ namespace Sga
         {
             if (this.panel_menuProfesor.Controls.Count > 0)
             {
-                this.Controls.RemoveAt(0);
+                this.panel_menuProfesor.Controls.Clear(); 
             }
 
-            Form fn = formClientes as Form;
-            if (fn != null)
+            if (formClientes != null)
             {
-                fn.TopLevel = false;
-                fn.FormBorderStyle = FormBorderStyle.None;
-                fn.Dock = DockStyle.Fill;
-                this.panel_menuProfesor.Controls.Add(fn);
-                this.panel_menuProfesor.Tag = fn;
-                fn.Show();
+                formClientes.TopLevel = false;
+                formClientes.FormBorderStyle = FormBorderStyle.None;
+                formClientes.Dock = DockStyle.Fill;
+                this.panel_menuProfesor.Controls.Add(formClientes);
+                this.panel_menuProfesor.Tag = formClientes;
+                formClientes.Show();
             }
+
         }
 
         private void Menu_Profesor_Load(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace Sga
 
         private void btnRegistrarAsisMP_Click(object sender, EventArgs e)
         {
-            AbrirEnPanelCliente(new Asistencia());
+            AbrirEnPanelCliente(new Asistencia00());
         }
 
         private void btnHorariosMP_Click(object sender, EventArgs e)

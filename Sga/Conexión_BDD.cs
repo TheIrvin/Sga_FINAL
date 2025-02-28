@@ -30,6 +30,8 @@ namespace Sga
             Usuario = "SGA_bdd";
             Clave = "102030";
         }
+        private string cadenaConexion = "Server=THEIRVIN\\SQLEXPRESS;Database=SGA_bdd;User Id=SGA_bdd;Password=102030;";
+
 
         public Conexión_BDD(string Server, string Database, string Usuario, string Clave)
         {
@@ -51,6 +53,17 @@ namespace Sga
             {
                 throw new Exception("Error al abrir la conexión: " + ex.Message);
             }
+        }
+        public DataTable ObtenerAlumnos()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT NombreCompleto FROM Alumnos", conexion);
+                adaptador.Fill(dt);
+            }
+            return dt;
         }
 
         public bool CerrarConexion()

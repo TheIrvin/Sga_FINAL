@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -36,7 +37,17 @@ namespace Sga
                 }
             }
         }
-
+        public DataTable ObtenerAlumnos()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT NombreCompleto FROM Alumnos", conexion);
+                adaptador.Fill(dt);
+            }
+            return dt;
+        }
         public string ObtenerTipoUsuario(string gmail)
         {
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
