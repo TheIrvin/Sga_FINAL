@@ -16,6 +16,7 @@ namespace Sga
         Conexión_BDD conexion = new Conexión_BDD();
         int profesorID = 1; // Se asignará al iniciar sesión
         int horarioSeleccionadoID = -1; // ID del horario seleccionado
+
         public frmHorarioProfesor()
         {
             InitializeComponent();
@@ -29,17 +30,17 @@ namespace Sga
 
         private void CargarMaterias()
         {
-            string query = "SELECT ID, NombreMateria FROM Materias";
+            string query = "SELECT ID, Nombre FROM Materias"; // Corregido
             DataTable dt = conexion.retornaRegistros(query);
 
             cmbAsignatura.DataSource = dt;
-            cmbAsignatura.DisplayMember = "NombreMateria";
+            cmbAsignatura.DisplayMember = "Nombre";
             cmbAsignatura.ValueMember = "ID";
         }
 
         private void CargarHorarios()
         {
-            string query = $"SELECT h.ID, h.DiaSemana, h.HoraInicio, h.HoraFin, m.NombreMateria AS Materia " +
+            string query = $"SELECT h.ID, h.DiaSemana, h.HoraInicio, h.HoraFin, m.Nombre AS Materia, m.ID AS MateriaID " +
                            $"FROM HorariosClases h " +
                            $"JOIN Materias m ON h.MateriaID = m.ID " +
                            $"WHERE h.ProfesorID = {profesorID}";
@@ -50,16 +51,16 @@ namespace Sga
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string dia = cmbDiaSemana.SelectedItem?.ToString();
+            if (cmbDiaSemana.SelectedItem == null || cmbAsignatura.SelectedValue == null)
+            {
+                MessageBox.Show("Seleccione un día de la semana y una materia.");
+                return;
+            }
+
+            string dia = cmbDiaSemana.SelectedItem.ToString();
             string horaInicio = dtpHoraInicio.Value.ToString("HH:mm");
             string horaFin = dtpHoraFin.Value.ToString("HH:mm");
             int materiaID = Convert.ToInt32(cmbAsignatura.SelectedValue);
-
-            if (string.IsNullOrWhiteSpace(dia))
-            {
-                MessageBox.Show("Seleccione un día de la semana.");
-                return;
-            }
 
             string query = $"INSERT INTO HorariosClases (ProfesorID, DiaSemana, HoraInicio, HoraFin, MateriaID) " +
                            $"VALUES ({profesorID}, '{dia}', '{horaInicio}', '{horaFin}', {materiaID})";
@@ -83,7 +84,13 @@ namespace Sga
                 return;
             }
 
-            string dia = cmbDiaSemana.SelectedItem?.ToString();
+            if (cmbDiaSemana.SelectedItem == null || cmbAsignatura.SelectedValue == null)
+            {
+                MessageBox.Show("Seleccione un día de la semana y una materia.");
+                return;
+            }
+
+            string dia = cmbDiaSemana.SelectedItem.ToString();
             string horaInicio = dtpHoraInicio.Value.ToString("HH:mm");
             string horaFin = dtpHoraFin.Value.ToString("HH:mm");
             int materiaID = Convert.ToInt32(cmbAsignatura.SelectedValue);
@@ -125,7 +132,6 @@ namespace Sga
                     MessageBox.Show("Error al eliminar el horario.");
                 }
             }
-
         }
 
         private void dgvHorarioProfesor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -137,7 +143,7 @@ namespace Sga
                 cmbDiaSemana.SelectedItem = row.Cells["DiaSemana"].Value.ToString();
                 dtpHoraInicio.Value = DateTime.Parse(row.Cells["HoraInicio"].Value.ToString());
                 dtpHoraFin.Value = DateTime.Parse(row.Cells["HoraFin"].Value.ToString());
-                cmbAsignatura.Text = row.Cells["Materia"].Value.ToString();
+                cmbAsignatura.SelectedValue = row.Cells["MateriaID"].Value; // Corregido
             }
         }
     }
