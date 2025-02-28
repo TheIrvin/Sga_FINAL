@@ -10,7 +10,7 @@ namespace Sga
 {
     internal class C_verificar_login
     {
-        private string cadenaConexion = "Server=DESKTOP-9SMDLH8\\SQLEXPRESS;Database=basedatos;User Id=charito;Password=charito;";
+        private string cadenaConexion = "Server=THEIRVIN\\SQLEXPRESS;Database=SGA_bdd;User Id=SGA_bdd;Password=102030;";
 
         public bool VerificarLogin(string gmail, string contraseña)
         {
