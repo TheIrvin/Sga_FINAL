@@ -361,6 +361,7 @@
             this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRegistroEstudiante);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionEstudiantes";
             this.Text = "Gestion de alumnos";
             this.Load += new System.EventHandler(this.GestionEstudiantes_Load);
