@@ -59,7 +59,7 @@ namespace Sga
 
         private void btnHorariosMP_Click(object sender, EventArgs e)
         {
-            AbrirEnPanelCliente(new Registro());
+            //AbrirEnPanelCliente(new Registro());
         }
     }
 }

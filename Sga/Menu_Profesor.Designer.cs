@@ -31,7 +31,6 @@
             this.panel_menuProfesor = new System.Windows.Forms.Panel();
             this.panelOpciones = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarEstudiante = new System.Windows.Forms.Button();
             this.btnEnviarSMSMP = new System.Windows.Forms.Button();
             this.btnRegistrarAsisMP = new System.Windows.Forms.Button();
             this.btnTareasMP = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             // 
             this.panelOpciones.BackgroundImage = global::Sga.Properties.Resources.PanelOpciones;
             this.panelOpciones.Controls.Add(this.button1);
-            this.panelOpciones.Controls.Add(this.btnAgregarEstudiante);
             this.panelOpciones.Controls.Add(this.btnEnviarSMSMP);
             this.panelOpciones.Controls.Add(this.btnRegistrarAsisMP);
             this.panelOpciones.Controls.Add(this.btnTareasMP);
@@ -86,26 +84,6 @@
             this.button1.Text = " Horarios";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnAgregarEstudiante
-            // 
-            this.btnAgregarEstudiante.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarEstudiante.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarEstudiante.FlatAppearance.BorderSize = 2;
-            this.btnAgregarEstudiante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnAgregarEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnAgregarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEstudiante.Image = global::Sga.Properties.Resources.agg_Estudiante;
-            this.btnAgregarEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarEstudiante.Location = new System.Drawing.Point(16, 470);
-            this.btnAgregarEstudiante.Name = "btnAgregarEstudiante";
-            this.btnAgregarEstudiante.Size = new System.Drawing.Size(170, 73);
-            this.btnAgregarEstudiante.TabIndex = 4;
-            this.btnAgregarEstudiante.Text = "Agregar Estudiante";
-            this.btnAgregarEstudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarEstudiante.UseVisualStyleBackColor = false;
-            this.btnAgregarEstudiante.Click += new System.EventHandler(this.btnHorariosMP_Click);
             // 
             // btnEnviarSMSMP
             // 
@@ -305,7 +283,6 @@
         private System.Windows.Forms.Button btnRegistrarAsisMP;
         private System.Windows.Forms.Button btnEnviarSMSMP;
         private System.Windows.Forms.Panel panel_menuProfesor;
-        private System.Windows.Forms.Button btnAgregarEstudiante;
         private System.Windows.Forms.Button button1;
     }
 }
