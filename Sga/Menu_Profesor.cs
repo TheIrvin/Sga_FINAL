@@ -54,7 +54,7 @@ namespace Sga
 
         private void btnRegistrarAsisMP_Click(object sender, EventArgs e)
         {
-            AbrirEnPanelCliente(new Asistencia());
+            AbrirEnPanelCliente(new Asistencia00());
         }
 
         private void btnMaxMP_Click(object sender, EventArgs e)

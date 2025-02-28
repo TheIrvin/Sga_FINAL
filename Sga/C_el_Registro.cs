@@ -13,7 +13,7 @@ namespace Sga
     {
         private Conexión_BDD conexion = new Conexión_BDD();
 
-        public bool RegistrarAlumno(string gmail, string contraseña, string nombreCompleto, string cedula, string nombrePadre, string nombreMadre, string telefono)
+        public bool RegistrarAlumno(string nombreCompleto, string cedula, string nombrePadre, string nombreMadre, string gmail, string telefono, string contraseña)
         {
             using (SqlConnection con = conexion.AbrirConexion())
             {
@@ -28,8 +28,7 @@ namespace Sga
                     int usuarioID = (int)cmdUsuarios.ExecuteScalar();
 
                     // Insertar en la tabla Alumnos
-                    string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
-                                          "VALUES (@UsuarioID, @NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
+                    string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " + "VALUES (@UsuarioID, @NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
                     SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con, transaction);
                     cmdAlumnos.Parameters.AddWithValue("@UsuarioID", usuarioID);
                     cmdAlumnos.Parameters.AddWithValue("@NombreCompleto", nombreCompleto);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Sga
 {
     internal class C_verificar_login
     {
-        private string cadenaConexion = "Server=ALXJANDR07\\SQLEXPRESS;Database=SGA_bdd;User Id=AleAdmin;Password=usu123;";
+        private string cadenaConexion = "Server=THEIRVIN\\SQLEXPRESS;Database=SGA_bdd;User Id=SGA_bdd;Password=102030;";
 
         public bool VerificarLogin(string gmail, string contraseña)
         {
@@ -35,6 +36,17 @@ namespace Sga
                     return false;
                 }
             }
+        }
+        public DataTable ObtenerAlumnos()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT NombreCompleto FROM Alumnos", conexion);
+                adaptador.Fill(dt);
+            }
+            return dt;
         }
 
         public string ObtenerTipoUsuario(string gmail)

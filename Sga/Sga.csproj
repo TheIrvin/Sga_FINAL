@@ -350,5 +350,11 @@
   <ItemGroup>
     <None Include="Resources\cerrar-sesion.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadrado_vacio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuadrado_LLENO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

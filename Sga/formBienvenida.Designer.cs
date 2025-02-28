@@ -179,6 +179,7 @@
             this.rtbPolitica.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbPolitica.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbPolitica.Location = new System.Drawing.Point(471, 28);
+            this.rtbPolitica.MaxLength = 214748;
             this.rtbPolitica.Name = "rtbPolitica";
             this.rtbPolitica.ReadOnly = true;
             this.rtbPolitica.Size = new System.Drawing.Size(345, 385);
