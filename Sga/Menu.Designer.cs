@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelContenedorME = new System.Windows.Forms.Panel();
             this.panelOpcioneME = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.BtnHorariosME = new System.Windows.Forms.Button();
+            this.btnHorariosME = new System.Windows.Forms.Button();
             this.btnMensajesME = new System.Windows.Forms.Button();
             this.btnTareasME = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@
             this.btnCerrarMP = new System.Windows.Forms.Button();
             this.btnRestMP = new System.Windows.Forms.Button();
             this.btnMinMP = new System.Windows.Forms.Button();
-            this.panelContenedorME = new System.Windows.Forms.Panel();
             this.panelOpcioneME.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,12 +50,20 @@
             this.panelCabeceraMC.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panelContenedorME
+            // 
+            this.panelContenedorME.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedorME.Location = new System.Drawing.Point(198, 47);
+            this.panelContenedorME.Name = "panelContenedorME";
+            this.panelContenedorME.Size = new System.Drawing.Size(734, 555);
+            this.panelContenedorME.TabIndex = 2;
+            // 
             // panelOpcioneME
             // 
             this.panelOpcioneME.BackgroundImage = global::Sga.Properties.Resources.panellll;
             this.panelOpcioneME.Controls.Add(this.pictureBox4);
             this.panelOpcioneME.Controls.Add(this.pictureBox3);
-            this.panelOpcioneME.Controls.Add(this.BtnHorariosME);
+            this.panelOpcioneME.Controls.Add(this.btnHorariosME);
             this.panelOpcioneME.Controls.Add(this.btnMensajesME);
             this.panelOpcioneME.Controls.Add(this.btnTareasME);
             this.panelOpcioneME.Controls.Add(this.pictureBox2);
@@ -88,24 +96,25 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
-            // BtnHorariosME
+            // btnHorariosME
             // 
-            this.BtnHorariosME.BackColor = System.Drawing.Color.Transparent;
-            this.BtnHorariosME.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnHorariosME.FlatAppearance.BorderSize = 2;
-            this.BtnHorariosME.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.BtnHorariosME.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.BtnHorariosME.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHorariosME.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHorariosME.Image = global::Sga.Properties.Resources.recreo;
-            this.BtnHorariosME.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHorariosME.Location = new System.Drawing.Point(18, 210);
-            this.BtnHorariosME.Name = "BtnHorariosME";
-            this.BtnHorariosME.Size = new System.Drawing.Size(170, 73);
-            this.BtnHorariosME.TabIndex = 8;
-            this.BtnHorariosME.Text = "HORARIOS";
-            this.BtnHorariosME.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnHorariosME.UseVisualStyleBackColor = false;
+            this.btnHorariosME.BackColor = System.Drawing.Color.Transparent;
+            this.btnHorariosME.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHorariosME.FlatAppearance.BorderSize = 2;
+            this.btnHorariosME.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnHorariosME.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnHorariosME.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorariosME.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorariosME.Image = global::Sga.Properties.Resources.recreo;
+            this.btnHorariosME.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorariosME.Location = new System.Drawing.Point(18, 210);
+            this.btnHorariosME.Name = "btnHorariosME";
+            this.btnHorariosME.Size = new System.Drawing.Size(170, 73);
+            this.btnHorariosME.TabIndex = 8;
+            this.btnHorariosME.Text = "HORARIOS";
+            this.btnHorariosME.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHorariosME.UseVisualStyleBackColor = false;
+            this.btnHorariosME.Click += new System.EventHandler(this.btnHorariosME_Click);
             // 
             // btnMensajesME
             // 
@@ -144,7 +153,6 @@
             this.btnTareasME.Text = "TAREAS";
             this.btnTareasME.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTareasME.UseVisualStyleBackColor = false;
-            this.btnTareasME.Click += new System.EventHandler(this.btnTareasME_Click);
             // 
             // pictureBox2
             // 
@@ -257,14 +265,6 @@
             this.btnMinMP.TabIndex = 8;
             this.btnMinMP.UseVisualStyleBackColor = false;
             // 
-            // panelContenedorME
-            // 
-            this.panelContenedorME.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorME.Location = new System.Drawing.Point(198, 47);
-            this.panelContenedorME.Name = "panelContenedorME";
-            this.panelContenedorME.Size = new System.Drawing.Size(734, 555);
-            this.panelContenedorME.TabIndex = 2;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,8 +278,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu_Load);
-            this.BackgroundImageLayoutChanged += new System.EventHandler(this.Menu_BackgroundImageLayoutChanged);
             this.panelOpcioneME.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -301,7 +299,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button BtnHorariosME;
+        private System.Windows.Forms.Button btnHorariosME;
         private System.Windows.Forms.Button btnMensajesME;
         private System.Windows.Forms.Button btnTareasME;
         private System.Windows.Forms.PictureBox pictureBox4;

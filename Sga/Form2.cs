@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -55,19 +56,81 @@ namespace Sga
 
         private void lbnConfirmar_Click(object sender, EventArgs e)
         {
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(txtBox_G_nombresAlumno.Text))
+            {
+                MessageBox.Show("El nombre del alumno no puede estar vacío.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBox_G_cédulaAlumno.Text))
+            {
+                MessageBox.Show("La cédula del alumno no puede estar vacía.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBox_G_telefono.Text))
+            {
+                MessageBox.Show("El teléfono del alumno no puede estar vacío.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBox_G_Gmail.Text))
+            {
+                MessageBox.Show("El correo electrónico del alumno no puede estar vacío.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBox_G_nombresPadre.Text))
+            {
+                MessageBox.Show("El nombre del padre no puede estar vacío.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBox_G_nombres_madre.Text))
+            {
+                MessageBox.Show("El nombre de la madre no puede estar vacío.");
+                return;
+            }
+
+            // Validar que la cédula sea un número válido y que tenga exactamente 10 dígitos
+            if (!long.TryParse(txtBox_G_cédulaAlumno.Text, out long cedula) || txtBox_G_cédulaAlumno.Text.Length != 10)
+            {
+                MessageBox.Show("La cédula debe ser un número válido de 10 dígitos.");
+                return;
+            }
+
+            // Validar que el teléfono sea numérico y que tenga exactamente 10 dígitos
+            if (!long.TryParse(txtBox_G_telefono.Text, out long telefono) || txtBox_G_telefono.Text.Length != 10)
+            {
+                MessageBox.Show("El teléfono debe ser un número válido de 10 dígitos.");
+                return;
+            }
+
+            // Validar que el correo tenga el formato adecuado
+            if (!Regex.IsMatch(txtBox_G_Gmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Por favor, ingrese un correo electrónico válido.");
+                return;
+            }
+
+            // Aquí debes verificar que alumnoID esté correctamente inicializado
+            int? alumnoID = null;  // O el valor correcto si ya está declarado en otro lugar
+
+            // Asegúrate de que la conexión esté abierta
             using (SqlConnection con = conSQL.AbrirConexion())
             {
-                
-
-
-                if (alumnoID == null) 
+                if (alumnoID == null)
                 {
+                    // Insertar en la tabla de Usuarios
                     string queryUsuarios = "INSERT INTO Usuarios (Gmail, Contraseña, TipoUsuario) OUTPUT INSERTED.ID VALUES (@Gmail, @Contraseña, 'Alumno')";
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
+                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = "defaultContraseña";  // Puedes cambiarlo por un valor adecuado
                         int usuarioID = (int)cmdUsuarios.ExecuteScalar();
 
+                        // Insertar en la tabla Alumnos
                         string queryAlumnos = "INSERT INTO Alumnos (UsuarioID, NombreCompleto, Cedula, NombrePadre, NombreMadre, Telefono, Gmail) " +
                                               "VALUES (@UsuarioID, @NombreCompleto, @Cedula, @NombrePadre, @NombreMadre, @Telefono, @Gmail)";
                         using (SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con))
@@ -83,8 +146,9 @@ namespace Sga
                         }
                     }
                 }
-                else 
+                else
                 {
+                    // Actualizar información del alumno
                     string queryAlumnos = "UPDATE Alumnos SET NombreCompleto=@NombreCompleto, Cedula=@Cedula, NombrePadre=@NombrePadre, NombreMadre=@NombreMadre, Telefono=@Telefono, Gmail=@Gmail WHERE ID=@ID";
                     using (SqlCommand cmdAlumnos = new SqlCommand(queryAlumnos, con))
                     {
@@ -97,17 +161,21 @@ namespace Sga
                         cmdAlumnos.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
                         cmdAlumnos.ExecuteNonQuery();
                     }
+
+                    // Actualizar la tabla de Usuarios
                     string queryUsuarios = "UPDATE Usuarios SET TipoUsuario='Alumno' WHERE Gmail=@Gmail";
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
                         cmdUsuarios.ExecuteNonQuery();
                     }
-                    alumnoID = null; 
+
+                    alumnoID = null; // Resetea el alumnoID después de la actualización
                 }
             }
-            LimpiarCampos();
-            CargarDatos();
+
+            LimpiarCampos();  // Limpiar los campos del formulario
+            CargarDatos();    // Volver a cargar los datos (según lo que sea necesario)
         }
 
         private void LimpiarCampos()
@@ -165,19 +233,10 @@ namespace Sga
             }
         }
 
-        private void lbnActualizar_Click(object sender, EventArgs e)
-        {
-            CargarDatos();
-        }
-
         private void txtBox_G_nombresAlumno_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lbnEditar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

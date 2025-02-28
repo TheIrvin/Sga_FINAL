@@ -66,6 +66,7 @@
             this.txtBox_G_nombresAlumno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_G_nombresAlumno.Location = new System.Drawing.Point(333, 61);
             this.txtBox_G_nombresAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_G_nombresAlumno.MaxLength = 50;
             this.txtBox_G_nombresAlumno.Name = "txtBox_G_nombresAlumno";
             this.txtBox_G_nombresAlumno.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_nombresAlumno.TabIndex = 18;
@@ -164,6 +165,7 @@
             this.txtBox_G_nombres_madre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_G_nombres_madre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_G_nombres_madre.Location = new System.Drawing.Point(333, 175);
+            this.txtBox_G_nombres_madre.MaxLength = 50;
             this.txtBox_G_nombres_madre.Name = "txtBox_G_nombres_madre";
             this.txtBox_G_nombres_madre.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_nombres_madre.TabIndex = 21;
@@ -187,6 +189,7 @@
             this.txtBox_G_Gmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_G_Gmail.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_G_Gmail.Location = new System.Drawing.Point(333, 251);
+            this.txtBox_G_Gmail.MaxLength = 20;
             this.txtBox_G_Gmail.Name = "txtBox_G_Gmail";
             this.txtBox_G_Gmail.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_Gmail.TabIndex = 23;
@@ -198,6 +201,7 @@
             this.txtBox_G_nombresPadre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_G_nombresPadre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_G_nombresPadre.Location = new System.Drawing.Point(333, 138);
+            this.txtBox_G_nombresPadre.MaxLength = 50;
             this.txtBox_G_nombresPadre.Name = "txtBox_G_nombresPadre";
             this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(187, 22);
             this.txtBox_G_nombresPadre.TabIndex = 20;

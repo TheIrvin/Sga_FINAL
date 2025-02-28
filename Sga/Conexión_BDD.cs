@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sga
 {
@@ -116,13 +117,21 @@ namespace Sga
 
         public bool ejecutarSQL(string Sentencia)
         {
-            AbrirConexion();
-            oCom = new SqlCommand(Sentencia, oCon);
-            oCom.ExecuteNonQuery();
-            CerrarConexion();
-            return true;
+            try
+            {
+                AbrirConexion();  // Asegúrate de que la conexión esté abierta
+                oCom = new SqlCommand(Sentencia, oCon);
+                oCom.ExecuteNonQuery();  // Ejecutar la sentencia SQL
+                CerrarConexion();  // Cerrar la conexión después de la ejecución
+                return true;  // Si todo sale bien, retorna true
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al ejecutar la sentencia SQL: {ex.Message}");
+                CerrarConexion();  // Asegúrate de cerrar la conexión en caso de error
+                return false;  // Si hubo un error, retorna false
+            }
         }
-
 
         public int retornaValor(string Seleccion, string Tabla, string Condicion)
         {

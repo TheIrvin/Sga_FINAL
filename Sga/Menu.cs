@@ -22,36 +22,6 @@ namespace Sga
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Menu_BackgroundImageLayoutChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTareasME_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelCabeceraMC_MouseLeave(object sender, EventArgs e)
         {
             ReleaseCapture();
@@ -75,6 +45,11 @@ namespace Sga
                 this.panelContenedorME.Tag = fn;
                 fn.Show();
             }
+        }
+
+        private void btnHorariosME_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new frmHorarioAlumno());
         }
     }
 }

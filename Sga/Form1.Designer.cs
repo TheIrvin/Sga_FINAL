@@ -87,6 +87,7 @@
             this.txtBox_Usuario_login.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_Usuario_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtBox_Usuario_login.Location = new System.Drawing.Point(71, 140);
+            this.txtBox_Usuario_login.MaxLength = 30;
             this.txtBox_Usuario_login.Name = "txtBox_Usuario_login";
             this.txtBox_Usuario_login.Size = new System.Drawing.Size(310, 19);
             this.txtBox_Usuario_login.TabIndex = 2;
@@ -101,6 +102,7 @@
             this.txtBox_Contraseña_login.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_Contraseña_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtBox_Contraseña_login.Location = new System.Drawing.Point(73, 192);
+            this.txtBox_Contraseña_login.MaxLength = 20;
             this.txtBox_Contraseña_login.Name = "txtBox_Contraseña_login";
             this.txtBox_Contraseña_login.Size = new System.Drawing.Size(309, 19);
             this.txtBox_Contraseña_login.TabIndex = 3;

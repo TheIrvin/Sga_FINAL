@@ -41,12 +41,6 @@ namespace Sga
             }
 
         }
-
-        private void Menu_Profesor_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAggAlumnos_Click(object sender, EventArgs e)
         {
             AbrirEnPanelCliente(new GestionEstudiantes());
@@ -60,11 +54,6 @@ namespace Sga
         private void btnRegistrarAsisMP_Click(object sender, EventArgs e)
         {
             AbrirEnPanelCliente(new Asistencia());
-        }
-
-        private void btnHorariosMP_Click(object sender, EventArgs e)
-        {
-            AbrirEnPanelCliente(new Registro());
         }
 
         private void btnMaxMP_Click(object sender, EventArgs e)
@@ -90,6 +79,11 @@ namespace Sga
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnHorariosMP_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new frmHorarioProfesor());
         }
     }
 }
