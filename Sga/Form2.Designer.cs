@@ -44,6 +44,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbAsname = new System.Windows.Forms.Label();
+            this.lbAcedul = new System.Windows.Forms.Label();
+            this.lbANm = new System.Windows.Forms.Label();
+            this.lbANp = new System.Windows.Forms.Label();
+            this.lbAtelefono = new System.Windows.Forms.Label();
+            this.lbAcElec = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_Gestion_estudiante)).BeginInit();
             this.SuspendLayout();
             // 
@@ -254,6 +260,78 @@
             this.label6.TabIndex = 119;
             this.label6.Text = "Correo electrónico:";
             // 
+            // lbAsname
+            // 
+            this.lbAsname.AutoSize = true;
+            this.lbAsname.BackColor = System.Drawing.Color.Transparent;
+            this.lbAsname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAsname.ForeColor = System.Drawing.Color.Red;
+            this.lbAsname.Location = new System.Drawing.Point(315, 65);
+            this.lbAsname.Name = "lbAsname";
+            this.lbAsname.Size = new System.Drawing.Size(15, 18);
+            this.lbAsname.TabIndex = 121;
+            this.lbAsname.Text = "*";
+            // 
+            // lbAcedul
+            // 
+            this.lbAcedul.AutoSize = true;
+            this.lbAcedul.BackColor = System.Drawing.Color.Transparent;
+            this.lbAcedul.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcedul.ForeColor = System.Drawing.Color.Red;
+            this.lbAcedul.Location = new System.Drawing.Point(315, 102);
+            this.lbAcedul.Name = "lbAcedul";
+            this.lbAcedul.Size = new System.Drawing.Size(15, 18);
+            this.lbAcedul.TabIndex = 122;
+            this.lbAcedul.Text = "*";
+            // 
+            // lbANm
+            // 
+            this.lbANm.AutoSize = true;
+            this.lbANm.BackColor = System.Drawing.Color.Transparent;
+            this.lbANm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbANm.ForeColor = System.Drawing.Color.Red;
+            this.lbANm.Location = new System.Drawing.Point(315, 178);
+            this.lbANm.Name = "lbANm";
+            this.lbANm.Size = new System.Drawing.Size(15, 18);
+            this.lbANm.TabIndex = 123;
+            this.lbANm.Text = "*";
+            // 
+            // lbANp
+            // 
+            this.lbANp.AutoSize = true;
+            this.lbANp.BackColor = System.Drawing.Color.Transparent;
+            this.lbANp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbANp.ForeColor = System.Drawing.Color.Red;
+            this.lbANp.Location = new System.Drawing.Point(315, 139);
+            this.lbANp.Name = "lbANp";
+            this.lbANp.Size = new System.Drawing.Size(15, 18);
+            this.lbANp.TabIndex = 124;
+            this.lbANp.Text = "*";
+            // 
+            // lbAtelefono
+            // 
+            this.lbAtelefono.AutoSize = true;
+            this.lbAtelefono.BackColor = System.Drawing.Color.Transparent;
+            this.lbAtelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAtelefono.ForeColor = System.Drawing.Color.Red;
+            this.lbAtelefono.Location = new System.Drawing.Point(316, 218);
+            this.lbAtelefono.Name = "lbAtelefono";
+            this.lbAtelefono.Size = new System.Drawing.Size(15, 18);
+            this.lbAtelefono.TabIndex = 125;
+            this.lbAtelefono.Text = "*";
+            // 
+            // lbAcElec
+            // 
+            this.lbAcElec.AutoSize = true;
+            this.lbAcElec.BackColor = System.Drawing.Color.Transparent;
+            this.lbAcElec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcElec.ForeColor = System.Drawing.Color.Red;
+            this.lbAcElec.Location = new System.Drawing.Point(316, 254);
+            this.lbAcElec.Name = "lbAcElec";
+            this.lbAcElec.Size = new System.Drawing.Size(15, 18);
+            this.lbAcElec.TabIndex = 126;
+            this.lbAcElec.Text = "*";
+            // 
             // GestionEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +339,12 @@
             this.BackgroundImage = global::Sga.Properties.Resources.fondo_formularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(718, 516);
+            this.Controls.Add(this.lbAcElec);
+            this.Controls.Add(this.lbAtelefono);
+            this.Controls.Add(this.lbANp);
+            this.Controls.Add(this.lbANm);
+            this.Controls.Add(this.lbAcedul);
+            this.Controls.Add(this.lbAsname);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
@@ -303,5 +387,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbAsname;
+        private System.Windows.Forms.Label lbAcedul;
+        private System.Windows.Forms.Label lbANm;
+        private System.Windows.Forms.Label lbANp;
+        private System.Windows.Forms.Label lbAtelefono;
+        private System.Windows.Forms.Label lbAcElec;
     }
 }
