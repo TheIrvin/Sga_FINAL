@@ -51,5 +51,18 @@ namespace Sga
         {
             AbrirEnPanelCliente(new frmHorarioAlumno());
         }
+
+        private void btnMensajesME_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new MensajesEstudiantes());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Form1 loginE = new Form1();
+            loginE.Show();
+
+            this.Close();
+        }
     }
 }

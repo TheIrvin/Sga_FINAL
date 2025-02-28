@@ -42,6 +42,7 @@
             this.btnCerrarMP = new System.Windows.Forms.Button();
             this.btnRestMP = new System.Windows.Forms.Button();
             this.btnMinMP = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelOpcioneME.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,6 +62,7 @@
             // panelOpcioneME
             // 
             this.panelOpcioneME.BackgroundImage = global::Sga.Properties.Resources.panellll;
+            this.panelOpcioneME.Controls.Add(this.btnCerrarSesion);
             this.panelOpcioneME.Controls.Add(this.pictureBox4);
             this.panelOpcioneME.Controls.Add(this.pictureBox3);
             this.panelOpcioneME.Controls.Add(this.btnHorariosME);
@@ -134,6 +136,7 @@
             this.btnMensajesME.Text = "MENSAJES";
             this.btnMensajesME.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMensajesME.UseVisualStyleBackColor = false;
+            this.btnMensajesME.Click += new System.EventHandler(this.btnMensajesME_Click);
             // 
             // btnTareasME
             // 
@@ -265,6 +268,23 @@
             this.btnMinMP.TabIndex = 8;
             this.btnMinMP.UseVisualStyleBackColor = false;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Sga.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(11, 485);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(62, 67);
+            this.btnCerrarSesion.TabIndex = 11;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +324,6 @@
         private System.Windows.Forms.Button btnTareasME;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panelContenedorME;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

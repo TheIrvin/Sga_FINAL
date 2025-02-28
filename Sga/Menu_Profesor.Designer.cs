@@ -30,8 +30,8 @@
         {
             this.panel_menuProfesor = new System.Windows.Forms.Panel();
             this.panelOpciones = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnHorariosMP = new System.Windows.Forms.Button();
-            this.btnAgregarEstudiante = new System.Windows.Forms.Button();
             this.btnEnviarSMSMP = new System.Windows.Forms.Button();
             this.btnRegistrarAsisMP = new System.Windows.Forms.Button();
             this.btnTareasMP = new System.Windows.Forms.Button();
@@ -56,8 +56,8 @@
             // panelOpciones
             // 
             this.panelOpciones.BackgroundImage = global::Sga.Properties.Resources.PanelOpciones;
+            this.panelOpciones.Controls.Add(this.btnCerrarSesion);
             this.panelOpciones.Controls.Add(this.btnHorariosMP);
-            this.panelOpciones.Controls.Add(this.btnAgregarEstudiante);
             this.panelOpciones.Controls.Add(this.btnEnviarSMSMP);
             this.panelOpciones.Controls.Add(this.btnRegistrarAsisMP);
             this.panelOpciones.Controls.Add(this.btnTareasMP);
@@ -67,6 +67,23 @@
             this.panelOpciones.Name = "panelOpciones";
             this.panelOpciones.Size = new System.Drawing.Size(198, 555);
             this.panelOpciones.TabIndex = 1;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Sga.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(9, 485);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(62, 67);
+            this.btnCerrarSesion.TabIndex = 6;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnHorariosMP
             // 
@@ -88,25 +105,6 @@
             this.btnHorariosMP.UseVisualStyleBackColor = false;
             this.btnHorariosMP.Click += new System.EventHandler(this.btnHorariosMP_Click);
             // 
-            // btnAgregarEstudiante
-            // 
-            this.btnAgregarEstudiante.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarEstudiante.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarEstudiante.FlatAppearance.BorderSize = 2;
-            this.btnAgregarEstudiante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnAgregarEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnAgregarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEstudiante.Image = global::Sga.Properties.Resources.agg_Estudiante;
-            this.btnAgregarEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarEstudiante.Location = new System.Drawing.Point(16, 470);
-            this.btnAgregarEstudiante.Name = "btnAgregarEstudiante";
-            this.btnAgregarEstudiante.Size = new System.Drawing.Size(170, 73);
-            this.btnAgregarEstudiante.TabIndex = 4;
-            this.btnAgregarEstudiante.Text = "Agregar Estudiante";
-            this.btnAgregarEstudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarEstudiante.UseVisualStyleBackColor = false;
-            // 
             // btnEnviarSMSMP
             // 
             this.btnEnviarSMSMP.BackColor = System.Drawing.Color.Transparent;
@@ -125,6 +123,7 @@
             this.btnEnviarSMSMP.Text = "Enviar Mensajes";
             this.btnEnviarSMSMP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnviarSMSMP.UseVisualStyleBackColor = false;
+            this.btnEnviarSMSMP.Click += new System.EventHandler(this.btnEnviarSMSMP_Click);
             // 
             // btnRegistrarAsisMP
             // 
@@ -308,7 +307,7 @@
         private System.Windows.Forms.Button btnRegistrarAsisMP;
         private System.Windows.Forms.Button btnEnviarSMSMP;
         private System.Windows.Forms.Panel panel_menuProfesor;
-        private System.Windows.Forms.Button btnAgregarEstudiante;
         private System.Windows.Forms.Button btnHorariosMP;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }
