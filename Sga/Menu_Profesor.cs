@@ -22,6 +22,7 @@ namespace Sga
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+       
 
         private void AbrirEnPanelCliente(Form formClientes)
         {
@@ -84,6 +85,24 @@ namespace Sga
         private void btnHorariosMP_Click(object sender, EventArgs e)
         {
             AbrirEnPanelCliente(new frmHorarioProfesor());
+        }
+
+        private void btnEnviarSMSMP_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new MensajesProfesor());
+        }
+
+        private void btnAgregarEstudiante_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            login.Show();
+
+            this.Close();
         }
     }
 }

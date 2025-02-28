@@ -173,6 +173,16 @@ namespace Sga.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comunicarse {
             get {
                 object obj = ResourceManager.GetObject("comunicarse", resourceCulture);
@@ -203,6 +213,16 @@ namespace Sga.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enviar {
+            get {
+                object obj = ResourceManager.GetObject("enviar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_formularios {
             get {
                 object obj = ResourceManager.GetObject("fondo formularios", resourceCulture);
@@ -216,6 +236,16 @@ namespace Sga.Properties {
         internal static System.Drawing.Bitmap fondo_niño {
             get {
                 object obj = ResourceManager.GetObject("fondo_niño", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap goma_de_borrar {
+            get {
+                object obj = ResourceManager.GetObject("goma-de-borrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +366,16 @@ namespace Sga.Properties {
         internal static System.Drawing.Bitmap mensaje {
             get {
                 object obj = ResourceManager.GetObject("mensaje", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mensajeria_fondo {
+            get {
+                object obj = ResourceManager.GetObject("Mensajeria fondo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
