@@ -17,9 +17,6 @@ namespace Sga
             InitializeComponent();
         }
 
-        private void lbnRegistro_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
     }
 }

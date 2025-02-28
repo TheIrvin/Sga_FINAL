@@ -444,39 +444,9 @@ namespace Sga.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap seguidores__2_ {
-            get {
-                object obj = ResourceManager.GetObject("seguidores (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap seguidores__4_ {
             get {
                 object obj = ResourceManager.GetObject("seguidores (4)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap seguidores__5_ {
-            get {
-                object obj = ResourceManager.GetObject("seguidores (5)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap seguidores1 {
-            get {
-                object obj = ResourceManager.GetObject("seguidores1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
