@@ -50,12 +50,15 @@
             this.lbANp = new System.Windows.Forms.Label();
             this.lbAtelefono = new System.Windows.Forms.Label();
             this.lbAcElec = new System.Windows.Forms.Label();
+            this.txtContraseñaEstudiante = new System.Windows.Forms.TextBox();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_Gestion_estudiante)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBox_G_cédulaAlumno
             // 
-            this.txtBox_G_cédulaAlumno.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtBox_G_cédulaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_G_cédulaAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
             this.txtBox_G_cédulaAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_G_cédulaAlumno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,12 +66,12 @@
             this.txtBox_G_cédulaAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.txtBox_G_cédulaAlumno.MaxLength = 10;
             this.txtBox_G_cédulaAlumno.Name = "txtBox_G_cédulaAlumno";
-            this.txtBox_G_cédulaAlumno.Size = new System.Drawing.Size(187, 22);
+            this.txtBox_G_cédulaAlumno.Size = new System.Drawing.Size(221, 22);
             this.txtBox_G_cédulaAlumno.TabIndex = 19;
             // 
             // txtBox_G_nombresAlumno
             // 
-            this.txtBox_G_nombresAlumno.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtBox_G_nombresAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBox_G_nombresAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
             this.txtBox_G_nombresAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_G_nombresAlumno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,13 +79,13 @@
             this.txtBox_G_nombresAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.txtBox_G_nombresAlumno.MaxLength = 50;
             this.txtBox_G_nombresAlumno.Name = "txtBox_G_nombresAlumno";
-            this.txtBox_G_nombresAlumno.Size = new System.Drawing.Size(187, 22);
+            this.txtBox_G_nombresAlumno.Size = new System.Drawing.Size(221, 22);
             this.txtBox_G_nombresAlumno.TabIndex = 18;
             this.txtBox_G_nombresAlumno.TextChanged += new System.EventHandler(this.txtBox_G_nombresAlumno_TextChanged);
             // 
             // lbnConfirmar
             // 
-            this.lbnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
             this.lbnConfirmar.FlatAppearance.BorderSize = 0;
             this.lbnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -100,7 +103,7 @@
             // 
             // lbnEliminar
             // 
-            this.lbnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
             this.lbnEliminar.FlatAppearance.BorderSize = 0;
             this.lbnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,7 +121,7 @@
             // 
             // lblCedula
             // 
-            this.lblCedula.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblCedula.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCedula.AutoSize = true;
             this.lblCedula.BackColor = System.Drawing.Color.Transparent;
             this.lblCedula.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,7 +134,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,7 +182,7 @@
             this.txtBox_G_nombres_madre.Location = new System.Drawing.Point(333, 175);
             this.txtBox_G_nombres_madre.MaxLength = 50;
             this.txtBox_G_nombres_madre.Name = "txtBox_G_nombres_madre";
-            this.txtBox_G_nombres_madre.Size = new System.Drawing.Size(187, 22);
+            this.txtBox_G_nombres_madre.Size = new System.Drawing.Size(221, 22);
             this.txtBox_G_nombres_madre.TabIndex = 21;
             // 
             // txtBox_G_telefono
@@ -191,7 +194,7 @@
             this.txtBox_G_telefono.Location = new System.Drawing.Point(333, 216);
             this.txtBox_G_telefono.MaxLength = 10;
             this.txtBox_G_telefono.Name = "txtBox_G_telefono";
-            this.txtBox_G_telefono.Size = new System.Drawing.Size(187, 22);
+            this.txtBox_G_telefono.Size = new System.Drawing.Size(221, 22);
             this.txtBox_G_telefono.TabIndex = 22;
             // 
             // txtBox_G_Gmail
@@ -203,7 +206,7 @@
             this.txtBox_G_Gmail.Location = new System.Drawing.Point(333, 251);
             this.txtBox_G_Gmail.MaxLength = 20;
             this.txtBox_G_Gmail.Name = "txtBox_G_Gmail";
-            this.txtBox_G_Gmail.Size = new System.Drawing.Size(187, 22);
+            this.txtBox_G_Gmail.Size = new System.Drawing.Size(221, 22);
             this.txtBox_G_Gmail.TabIndex = 23;
             // 
             // txtBox_G_nombresPadre
@@ -215,12 +218,12 @@
             this.txtBox_G_nombresPadre.Location = new System.Drawing.Point(333, 138);
             this.txtBox_G_nombresPadre.MaxLength = 50;
             this.txtBox_G_nombresPadre.Name = "txtBox_G_nombresPadre";
-            this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(187, 22);
+            this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(221, 22);
             this.txtBox_G_nombresPadre.TabIndex = 20;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,7 +236,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,7 +249,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,7 +262,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,6 +275,7 @@
             // 
             // lbAsname
             // 
+            this.lbAsname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbAsname.AutoSize = true;
             this.lbAsname.BackColor = System.Drawing.Color.Transparent;
             this.lbAsname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,6 +346,42 @@
             this.lbAcElec.TabIndex = 126;
             this.lbAcElec.Text = "*";
             // 
+            // txtContraseñaEstudiante
+            // 
+            this.txtContraseñaEstudiante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtContraseñaEstudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(221)))));
+            this.txtContraseñaEstudiante.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseñaEstudiante.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaEstudiante.Location = new System.Drawing.Point(333, 293);
+            this.txtContraseñaEstudiante.Name = "txtContraseñaEstudiante";
+            this.txtContraseñaEstudiante.Size = new System.Drawing.Size(221, 22);
+            this.txtContraseñaEstudiante.TabIndex = 127;
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.lblContraseña.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(21, 293);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(118, 24);
+            this.lblContraseña.TabIndex = 128;
+            this.lblContraseña.Text = "Contraseña:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(316, 293);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 18);
+            this.label3.TabIndex = 130;
+            this.label3.Text = "*";
+            // 
             // GestionEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +389,9 @@
             this.BackgroundImage = global::Sga.Properties.Resources.fondo_formularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(718, 516);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtContraseñaEstudiante);
+            this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lbAcElec);
             this.Controls.Add(this.lbAtelefono);
             this.Controls.Add(this.lbANp);
@@ -404,5 +447,8 @@
         private System.Windows.Forms.Label lbANp;
         private System.Windows.Forms.Label lbAtelefono;
         private System.Windows.Forms.Label lbAcElec;
+        private System.Windows.Forms.TextBox txtContraseñaEstudiante;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label label3;
     }
 }

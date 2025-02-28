@@ -127,7 +127,7 @@ namespace Sga
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
-                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = "defaultContraseña";  // Puedes cambiarlo por un valor adecuado
+                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = txtContraseñaEstudiante.Text;  // Puedes cambiarlo por un valor adecuado
                         int usuarioID = (int)cmdUsuarios.ExecuteScalar();
 
                         // Insertar en la tabla Alumnos
@@ -167,6 +167,7 @@ namespace Sga
                     using (SqlCommand cmdUsuarios = new SqlCommand(queryUsuarios, con))
                     {
                         cmdUsuarios.Parameters.Add("@Gmail", SqlDbType.VarChar).Value = txtBox_G_Gmail.Text;
+                        cmdUsuarios.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = txtContraseñaEstudiante.Text;
                         cmdUsuarios.ExecuteNonQuery();
                     }
 
