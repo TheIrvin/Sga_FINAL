@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_profesor));
             this.bt_crearCuenta_profesor = new System.Windows.Forms.Button();
             this.txtbox_profesor_nombres = new System.Windows.Forms.TextBox();
             this.lbl_profesor_nombre = new System.Windows.Forms.Label();
@@ -421,6 +422,7 @@
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registro_profesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

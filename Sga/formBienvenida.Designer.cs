@@ -196,6 +196,7 @@
             this.Controls.Add(this.pnContenedorInicio);
             this.Controls.Add(this.panelCabeceraInicio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formBienvenida";
             this.Text = "formBienvenida";
             this.panelCabeceraInicio.ResumeLayout(false);
