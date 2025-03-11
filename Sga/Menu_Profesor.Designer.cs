@@ -163,6 +163,7 @@
             this.btnTareasMP.Text = "Registro de Tareas";
             this.btnTareasMP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTareasMP.UseVisualStyleBackColor = false;
+            this.btnTareasMP.Click += new System.EventHandler(this.btnTareasMP_Click);
             // 
             // btnAggAlumnos
             // 

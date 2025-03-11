@@ -104,5 +104,10 @@ namespace Sga
 
             this.Close();
         }
+
+        private void btnTareasMP_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanelCliente(new Tareas());
+        }
     }
 }
