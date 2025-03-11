@@ -37,9 +37,7 @@
             this.btnAcceder = new System.Windows.Forms.Button();
             this.pcCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblPerdida = new System.Windows.Forms.LinkLabel();
             this.lbl_Registrarse = new System.Windows.Forms.Label();
-            this.lbl_o = new System.Windows.Forms.Label();
             this.pbVerContraseña = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,24 +152,12 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lblPerdida
-            // 
-            this.lblPerdida.AutoSize = true;
-            this.lblPerdida.BackColor = System.Drawing.Color.Transparent;
-            this.lblPerdida.Location = new System.Drawing.Point(213, 289);
-            this.lblPerdida.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPerdida.Name = "lblPerdida";
-            this.lblPerdida.Size = new System.Drawing.Size(149, 13);
-            this.lblPerdida.TabIndex = 1;
-            this.lblPerdida.TabStop = true;
-            this.lblPerdida.Text = "¿Has olvidado tu contraseña?";
-            // 
             // lbl_Registrarse
             // 
             this.lbl_Registrarse.AutoSize = true;
             this.lbl_Registrarse.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Registrarse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Registrarse.Location = new System.Drawing.Point(87, 289);
+            this.lbl_Registrarse.Location = new System.Drawing.Point(178, 289);
             this.lbl_Registrarse.Name = "lbl_Registrarse";
             this.lbl_Registrarse.Size = new System.Drawing.Size(102, 13);
             this.lbl_Registrarse.TabIndex = 8;
@@ -179,16 +165,6 @@
             this.lbl_Registrarse.Click += new System.EventHandler(this.lbl_Registrarse_Click);
             this.lbl_Registrarse.MouseEnter += new System.EventHandler(this.lbl_Registrarse_MouseEnter);
             this.lbl_Registrarse.MouseLeave += new System.EventHandler(this.lbl_Registrarse_MouseLeave);
-            // 
-            // lbl_o
-            // 
-            this.lbl_o.AutoSize = true;
-            this.lbl_o.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_o.Location = new System.Drawing.Point(195, 289);
-            this.lbl_o.Name = "lbl_o";
-            this.lbl_o.Size = new System.Drawing.Size(13, 13);
-            this.lbl_o.TabIndex = 9;
-            this.lbl_o.Text = "o";
             // 
             // pbVerContraseña
             // 
@@ -211,9 +187,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(444, 311);
             this.Controls.Add(this.pbVerContraseña);
-            this.Controls.Add(this.lbl_o);
             this.Controls.Add(this.lbl_Registrarse);
-            this.Controls.Add(this.lblPerdida);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pcCerrar);
             this.Controls.Add(this.btnAcceder);
@@ -247,9 +221,7 @@
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.PictureBox pcCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel lblPerdida;
         private System.Windows.Forms.Label lbl_Registrarse;
-        private System.Windows.Forms.Label lbl_o;
         private System.Windows.Forms.PictureBox pbVerContraseña;
     }
 }
