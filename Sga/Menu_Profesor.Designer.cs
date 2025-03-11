@@ -217,6 +217,7 @@
             this.btnMaxMP.Size = new System.Drawing.Size(40, 40);
             this.btnMaxMP.TabIndex = 7;
             this.btnMaxMP.UseVisualStyleBackColor = false;
+            this.btnMaxMP.Visible = false;
             this.btnMaxMP.Click += new System.EventHandler(this.btnMaxMP_Click);
             // 
             // btnCerrarMP
@@ -275,6 +276,7 @@
             this.btnMinMP.Size = new System.Drawing.Size(40, 40);
             this.btnMinMP.TabIndex = 3;
             this.btnMinMP.UseVisualStyleBackColor = false;
+            this.btnMinMP.Visible = false;
             this.btnMinMP.Click += new System.EventHandler(this.btnMinMP_Click);
             // 
             // Menu_Profesor

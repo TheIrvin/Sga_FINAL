@@ -30,6 +30,7 @@
         {
             this.panelContenedorME = new System.Windows.Forms.Panel();
             this.panelOpcioneME = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnHorariosME = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.btnCerrarMP = new System.Windows.Forms.Button();
             this.btnRestMP = new System.Windows.Forms.Button();
             this.btnMinMP = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelOpcioneME.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,6 +75,23 @@
             this.panelOpcioneME.Name = "panelOpcioneME";
             this.panelOpcioneME.Size = new System.Drawing.Size(198, 555);
             this.panelOpcioneME.TabIndex = 1;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Sga.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(11, 485);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(62, 67);
+            this.btnCerrarSesion.TabIndex = 11;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pictureBox4
             // 
@@ -212,6 +229,7 @@
             this.btnMaxMP.Size = new System.Drawing.Size(40, 40);
             this.btnMaxMP.TabIndex = 11;
             this.btnMaxMP.UseVisualStyleBackColor = false;
+            this.btnMaxMP.Visible = false;
             // 
             // btnCerrarMP
             // 
@@ -267,23 +285,7 @@
             this.btnMinMP.Size = new System.Drawing.Size(40, 40);
             this.btnMinMP.TabIndex = 8;
             this.btnMinMP.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Image = global::Sga.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(11, 485);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(62, 67);
-            this.btnCerrarSesion.TabIndex = 11;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnMinMP.Visible = false;
             // 
             // Menu
             // 

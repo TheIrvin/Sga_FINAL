@@ -14,6 +14,7 @@ namespace Sga
     {
         private Conexión_BDD conexion = new Conexión_BDD();
         private int alumnoID = 1; // CAMBIAR por el ID del alumno logueado
+
         public frmHorarioAlumno()
         {
             InitializeComponent();
@@ -26,8 +27,8 @@ namespace Sga
 
         private void CargarHorarioAlumno()
         {
-            string query = "SELECT h.DiaSemana, h.HoraInicio, h.HoraFin, m.NombreMateria AS Materia, " +
-                           "p.NombreCompleto AS Profesor " +
+            string query = "SELECT h.DiaSemana, h.HoraInicio, h.HoraFin, m.Nombre AS Materia, " +
+                           "p.Nombres + ' ' + p.Apellidos AS Profesor " + // Corregido
                            "FROM HorariosClases h " +
                            "JOIN Materias m ON h.MateriaID = m.ID " +
                            "JOIN Profesores p ON h.ProfesorID = p.ID " +
@@ -35,6 +36,7 @@ namespace Sga
 
             DataTable dt = conexion.retornaRegistros(query);
             dgvHorarioAlumno.DataSource = dt;
+            dgvHorarioAlumno.ReadOnly = true; // Hace que la tabla sea de solo lectura
         }
     }
 }
