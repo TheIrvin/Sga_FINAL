@@ -180,7 +180,7 @@
             this.txtBox_G_nombres_madre.Location = new System.Drawing.Point(333, 175);
             this.txtBox_G_nombres_madre.MaxLength = 50;
             this.txtBox_G_nombres_madre.Name = "txtBox_G_nombres_madre";
-            this.txtBox_G_nombres_madre.Size = new System.Drawing.Size(221, 22);
+            this.txtBox_G_nombres_madre.Size = new System.Drawing.Size(258, 22);
             this.txtBox_G_nombres_madre.TabIndex = 21;
             // 
             // txtBox_G_telefono
@@ -192,7 +192,7 @@
             this.txtBox_G_telefono.Location = new System.Drawing.Point(333, 216);
             this.txtBox_G_telefono.MaxLength = 10;
             this.txtBox_G_telefono.Name = "txtBox_G_telefono";
-            this.txtBox_G_telefono.Size = new System.Drawing.Size(221, 22);
+            this.txtBox_G_telefono.Size = new System.Drawing.Size(258, 22);
             this.txtBox_G_telefono.TabIndex = 22;
             // 
             // txtBox_G_Gmail
@@ -204,7 +204,7 @@
             this.txtBox_G_Gmail.Location = new System.Drawing.Point(333, 251);
             this.txtBox_G_Gmail.MaxLength = 20;
             this.txtBox_G_Gmail.Name = "txtBox_G_Gmail";
-            this.txtBox_G_Gmail.Size = new System.Drawing.Size(221, 22);
+            this.txtBox_G_Gmail.Size = new System.Drawing.Size(258, 22);
             this.txtBox_G_Gmail.TabIndex = 23;
             // 
             // txtBox_G_nombresPadre
@@ -216,7 +216,7 @@
             this.txtBox_G_nombresPadre.Location = new System.Drawing.Point(333, 138);
             this.txtBox_G_nombresPadre.MaxLength = 50;
             this.txtBox_G_nombresPadre.Name = "txtBox_G_nombresPadre";
-            this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(249, 22);
+            this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(258, 22);
             this.txtBox_G_nombresPadre.TabIndex = 20;
             // 
             // label2
@@ -347,7 +347,7 @@
             this.txtContraseñaEstudiante.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaEstudiante.Location = new System.Drawing.Point(333, 293);
             this.txtContraseñaEstudiante.Name = "txtContraseñaEstudiante";
-            this.txtContraseñaEstudiante.Size = new System.Drawing.Size(221, 22);
+            this.txtContraseñaEstudiante.Size = new System.Drawing.Size(258, 22);
             this.txtContraseñaEstudiante.TabIndex = 127;
             // 
             // lblContraseña
