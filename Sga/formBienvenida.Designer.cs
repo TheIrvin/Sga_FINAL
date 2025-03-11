@@ -57,7 +57,7 @@
             this.panelCabeceraInicio.Name = "panelCabeceraInicio";
             this.panelCabeceraInicio.Size = new System.Drawing.Size(840, 47);
             this.panelCabeceraInicio.TabIndex = 2;
-            this.panelCabeceraInicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCabeceraInicio_Paint);
+            this.panelCabeceraInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabeceraInicio_MouseDown);
             // 
             // label1
             // 

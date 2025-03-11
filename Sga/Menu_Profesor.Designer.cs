@@ -188,16 +188,16 @@
             // panelCabeceraProfe
             // 
             this.panelCabeceraProfe.BackgroundImage = global::Sga.Properties.Resources.WhatsApp_Image_2025_02_25_at_9_40_59_PM;
-            this.panelCabeceraProfe.Controls.Add(this.btnMaxMP);
             this.panelCabeceraProfe.Controls.Add(this.btnCerrarMP);
             this.panelCabeceraProfe.Controls.Add(this.btnRestMP);
             this.panelCabeceraProfe.Controls.Add(this.btnMinMP);
+            this.panelCabeceraProfe.Controls.Add(this.btnMaxMP);
             this.panelCabeceraProfe.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabeceraProfe.Location = new System.Drawing.Point(0, 0);
             this.panelCabeceraProfe.Name = "panelCabeceraProfe";
             this.panelCabeceraProfe.Size = new System.Drawing.Size(932, 47);
             this.panelCabeceraProfe.TabIndex = 0;
-            this.panelCabeceraProfe.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCabeceraProfe_Paint);
+            this.panelCabeceraProfe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabeceraProfe_MouseDown);
             // 
             // btnMaxMP
             // 
@@ -217,7 +217,6 @@
             this.btnMaxMP.Size = new System.Drawing.Size(40, 40);
             this.btnMaxMP.TabIndex = 7;
             this.btnMaxMP.UseVisualStyleBackColor = false;
-            this.btnMaxMP.Visible = false;
             this.btnMaxMP.Click += new System.EventHandler(this.btnMaxMP_Click);
             // 
             // btnCerrarMP
@@ -250,7 +249,7 @@
             this.btnRestMP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Salmon;
             this.btnRestMP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btnRestMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestMP.Location = new System.Drawing.Point(708, 1);
+            this.btnRestMP.Location = new System.Drawing.Point(849, 2);
             this.btnRestMP.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestMP.Name = "btnRestMP";
             this.btnRestMP.Size = new System.Drawing.Size(40, 40);
@@ -276,7 +275,6 @@
             this.btnMinMP.Size = new System.Drawing.Size(40, 40);
             this.btnMinMP.TabIndex = 3;
             this.btnMinMP.UseVisualStyleBackColor = false;
-            this.btnMinMP.Visible = false;
             this.btnMinMP.Click += new System.EventHandler(this.btnMinMP_Click);
             // 
             // Menu_Profesor

@@ -160,7 +160,7 @@
             this.lbl_Registrarse.Location = new System.Drawing.Point(178, 289);
             this.lbl_Registrarse.Name = "lbl_Registrarse";
             this.lbl_Registrarse.Size = new System.Drawing.Size(102, 13);
-            this.lbl_Registrarse.TabIndex = 8;
+            this.lbl_Registrarse.TabIndex = 5;
             this.lbl_Registrarse.Text = "Registrar Profesores";
             this.lbl_Registrarse.Click += new System.EventHandler(this.lbl_Registrarse_Click);
             this.lbl_Registrarse.MouseEnter += new System.EventHandler(this.lbl_Registrarse_MouseEnter);

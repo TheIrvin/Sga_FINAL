@@ -44,7 +44,7 @@ namespace Sga
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panelCabeceraInicio_Paint(object sender, PaintEventArgs e)
+        private void panelCabeceraInicio_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

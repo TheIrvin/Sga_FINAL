@@ -66,7 +66,7 @@
             this.txtBox_G_cédulaAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.txtBox_G_cédulaAlumno.MaxLength = 10;
             this.txtBox_G_cédulaAlumno.Name = "txtBox_G_cédulaAlumno";
-            this.txtBox_G_cédulaAlumno.Size = new System.Drawing.Size(221, 22);
+            this.txtBox_G_cédulaAlumno.Size = new System.Drawing.Size(258, 22);
             this.txtBox_G_cédulaAlumno.TabIndex = 19;
             // 
             // txtBox_G_nombresAlumno
@@ -79,7 +79,7 @@
             this.txtBox_G_nombresAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.txtBox_G_nombresAlumno.MaxLength = 50;
             this.txtBox_G_nombresAlumno.Name = "txtBox_G_nombresAlumno";
-            this.txtBox_G_nombresAlumno.Size = new System.Drawing.Size(221, 22);
+            this.txtBox_G_nombresAlumno.Size = new System.Drawing.Size(258, 22);
             this.txtBox_G_nombresAlumno.TabIndex = 18;
             this.txtBox_G_nombresAlumno.TextChanged += new System.EventHandler(this.txtBox_G_nombresAlumno_TextChanged);
             // 
@@ -90,7 +90,7 @@
             this.lbnConfirmar.FlatAppearance.BorderSize = 0;
             this.lbnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbnConfirmar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnConfirmar.Location = new System.Drawing.Point(585, 98);
+            this.lbnConfirmar.Location = new System.Drawing.Point(605, 132);
             this.lbnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnConfirmar.Name = "lbnConfirmar";
             this.lbnConfirmar.Size = new System.Drawing.Size(102, 33);
@@ -108,7 +108,7 @@
             this.lbnEliminar.FlatAppearance.BorderSize = 0;
             this.lbnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbnEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnEliminar.Location = new System.Drawing.Point(585, 213);
+            this.lbnEliminar.Location = new System.Drawing.Point(605, 213);
             this.lbnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.lbnEliminar.Name = "lbnEliminar";
             this.lbnEliminar.Size = new System.Drawing.Size(102, 33);
@@ -121,7 +121,6 @@
             // 
             // lblCedula
             // 
-            this.lblCedula.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCedula.AutoSize = true;
             this.lblCedula.BackColor = System.Drawing.Color.Transparent;
             this.lblCedula.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,7 +133,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,12 +216,11 @@
             this.txtBox_G_nombresPadre.Location = new System.Drawing.Point(333, 138);
             this.txtBox_G_nombresPadre.MaxLength = 50;
             this.txtBox_G_nombresPadre.Name = "txtBox_G_nombresPadre";
-            this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(221, 22);
+            this.txtBox_G_nombresPadre.Size = new System.Drawing.Size(249, 22);
             this.txtBox_G_nombresPadre.TabIndex = 20;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,7 +233,6 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,7 +245,6 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,7 +257,6 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,7 +269,6 @@
             // 
             // lbAsname
             // 
-            this.lbAsname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbAsname.AutoSize = true;
             this.lbAsname.BackColor = System.Drawing.Color.Transparent;
             this.lbAsname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -359,7 +352,6 @@
             // 
             // lblContraseña
             // 
-            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lblContraseña.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));

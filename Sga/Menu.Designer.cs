@@ -200,16 +200,16 @@
             // panelCabeceraMC
             // 
             this.panelCabeceraMC.BackgroundImage = global::Sga.Properties.Resources.cabecera_niños;
-            this.panelCabeceraMC.Controls.Add(this.btnMaxMP);
             this.panelCabeceraMC.Controls.Add(this.btnCerrarMP);
             this.panelCabeceraMC.Controls.Add(this.btnRestMP);
             this.panelCabeceraMC.Controls.Add(this.btnMinMP);
+            this.panelCabeceraMC.Controls.Add(this.btnMaxMP);
             this.panelCabeceraMC.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabeceraMC.Location = new System.Drawing.Point(0, 0);
             this.panelCabeceraMC.Name = "panelCabeceraMC";
             this.panelCabeceraMC.Size = new System.Drawing.Size(932, 47);
             this.panelCabeceraMC.TabIndex = 0;
-            this.panelCabeceraMC.MouseLeave += new System.EventHandler(this.panelCabeceraMC_MouseLeave);
+            this.panelCabeceraMC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabeceraMC_MouseDown);
             // 
             // btnMaxMP
             // 
@@ -229,7 +229,6 @@
             this.btnMaxMP.Size = new System.Drawing.Size(40, 40);
             this.btnMaxMP.TabIndex = 11;
             this.btnMaxMP.UseVisualStyleBackColor = false;
-            this.btnMaxMP.Visible = false;
             // 
             // btnCerrarMP
             // 
@@ -260,7 +259,7 @@
             this.btnRestMP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Salmon;
             this.btnRestMP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btnRestMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestMP.Location = new System.Drawing.Point(707, 0);
+            this.btnRestMP.Location = new System.Drawing.Point(848, 1);
             this.btnRestMP.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestMP.Name = "btnRestMP";
             this.btnRestMP.Size = new System.Drawing.Size(40, 40);
@@ -285,7 +284,6 @@
             this.btnMinMP.Size = new System.Drawing.Size(40, 40);
             this.btnMinMP.TabIndex = 8;
             this.btnMinMP.UseVisualStyleBackColor = false;
-            this.btnMinMP.Visible = false;
             // 
             // Menu
             // 
